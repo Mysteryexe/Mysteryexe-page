@@ -1,0 +1,343 @@
+@keyframes movement {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes transparecy {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleHor {
+  from {
+    width: 100vw;
+  }
+  to {
+    width: 40vw;
+  }
+}
+img {
+  image-rendering: auto;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-repeat: repeat;
+  background-color: black;
+  background-size: 40vw;
+  max-width: 100vw;
+  z-index: -1000;
+  background-image: url("https://media.discordapp.net/attachments/893742457731293225/938076074368184371/backgroundRandomColors.png");
+}
+.transparent {
+  animation-name: transparecy;
+  animation-duration: 3s;
+}
+.animated {
+  animation-name: movement;
+  animation-duration: 2s;
+}
+.scalehored {
+  animation-name: scaleHor;
+  animation-duration: 2s;
+  overflow: hidden;
+}
+h1 {
+  -webkit-font-smoothing: auto;
+  user-select: none;
+  position: relative;
+  height: 13vh;
+  max-width: 100vw;
+  text-align: center;
+  font-size: 12vh;
+  background: linear-gradient(-200deg, #ffb300, #ff6200);
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: -0.005vw;
+  cursor: default;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  font-family: "Bebas Neue", cursive;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(10px 10px 10px rgb(34, 34, 34, 0.1));
+  filter: drop-shadow(10px 10px 10px rgb(34, 34, 34, 0.1));
+}
+h2 {
+  -webkit-font-smoothing: auto;
+  user-select: none;
+  max-width: 100vw;
+  margin-top: 00%;
+  position: relative;
+  text-align: center;
+  font-size: 3.5vh;
+  padding: 0px;
+  background: linear-gradient(35deg, #ffb300, #ff6200);
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-style: normal;
+  cursor: default;
+  font-family: "Dongle", sans-serif;
+}
+h3 {
+  -webkit-font-smoothing: auto;
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  position: relative;
+  height: 6vh;
+  letter-spacing: 0.1vw;
+  font-size: 5vh;
+  background: linear-gradient(-200deg, #ffb300, #ff6200);
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: default;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+p2 {
+  -webkit-font-smoothing: auto;
+  user-select: none;
+  width: 100%;
+  display: flow-root;
+  position: relative;
+  text-align: center;
+  font-size: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  background: linear-gradient(-200deg, #ffb300, #ff6200);
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.25);
+  cursor: default;
+  font-family: "Chakra Petch", sans-serif;
+  align-self: flex-end;
+}
+p3 {
+  -webkit-font-smoothing: auto;
+  position: relative;
+  height: 5vh;
+  user-select: text;
+  text-align: left;
+  font-size: 2.8vh;
+  font-style: normal;
+  color: #5865f2;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.25);
+  cursor: text;
+  font-family: "Chakra Petch", sans-serif;
+  margin-left: 0.35vw;
+}
+.middle {
+  user-select: none;
+  left: 50vw;
+  top: 50vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
+.midScreen {
+  user-select: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center {
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(34, 34, 34, 0.1));
+  filter: drop-shadow(5px 5px 5px rgb(34, 34, 34, 0.1));
+  user-select: none;
+  z-index: 2;
+  display: list-item;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  transition: transform 1s ease;
+}
+.center:hover {
+  transform: scale(1.1);
+}
+.icon {
+  width: 2vh;
+  height: 2vh;
+  background-size: 2em;
+  position: fixed;
+}
+.adobe {
+  display: block;
+  position: relative;
+  transition: transform 1s ease;
+}
+.discord {
+  display: block;
+  height: 5vh;
+  user-select: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 1.2vw;
+  margin-bottom: 2vh;
+}
+#outlineNeon {
+  position: fixed;
+  left: 2vh;
+  top: 2vh;
+  width: calc(100% - 4vh);
+  height: calc(100vh - 4vh);
+  outline: 0.4vh solid #ff9900;
+  box-shadow: inset 0 0 1vh #ff9900;
+  z-index: -4;
+}
+.navlink {
+  margin: auto;
+  width: auto;
+  height: auto;
+  float: left;
+  -webkit-font-smoothing: auto;
+  user-select: none;
+  position: relative;
+  text-align: center;
+  font-size: 3vh;
+  font-style: normal;
+  background: linear-gradient(-200deg, #ffb300, #ff6200);
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif;
+}
+.navholder {
+  width: auto;
+  display: flex;
+}
+.navbutton {
+  float: left;
+  width: 4vh;
+  height: 4vh;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(-35deg, #ff9900, #ff6200);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30%;
+  margin-right: 0.5vw;
+}
+.widthcenter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vh;
+  justify-content: space-around;
+  display: flex;
+}
+.muted {
+  background-image: url("https://media.discordapp.net/attachments/851753816881102869/938816098579660820/Muted.png");
+  z-index: 10;
+}
+.unmuted {
+  background-image: url("https://media.discordapp.net/attachments/851753816881102869/938816098940362812/Unmuted.png");
+  z-index: 10;
+}
+.downnav {
+  z-index: -3;
+  bottom: -112.5vh;
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  background-color: black;
+}
+.work {
+  user-select: none;
+  padding: 1.5%;
+  justify-content: space-between;
+  display: flex;
+}
+.info {
+  user-select: none;
+  align-self: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.line {
+  background: linear-gradient(
+    0.25turn,
+    rgb(255, 98, 0, 0),
+    rgb(255, 98, 0, 0.5),
+    rgb(255, 179, 1),
+    rgb(255, 98, 0, 1),
+    rgb(255, 179, 1),
+    rgb(255, 98, 0, 0.5),
+    rgb(255, 98, 0, 0)
+  );
+  width: 25vw;
+  min-width: 35vh;
+  height: 0.4vh;
+  border-radius: 100%;
+}
+.circle {
+  transform: translate(0, -15vh);
+  margin: 1vh;
+  position: relative;
+  border-radius: 20%;
+  background: linear-gradient(-35deg, #ff9900, #ff6200);
+  width: 10vh;
+  height: 10vh;
+  z-index: -1;
+  aspect-ratio: 1;
+}
+.adobe:hover {
+  transform: scale(1.1);
+}
+.bgline {
+  width: 40vw;
+  height: 300vh;
+  max-width: 100vw;
+  background-color: rgb(0, 0, 0, 0.7);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -4;
+  -webkit-backdrop-filter: blur(0.5vh);
+  backdrop-filter: blur(0.5vh);
+  overflow: hidden;
+  display: table;
+  min-width: 450px;
+}
+.gradient {
+  width: 100%;
+  background-size: 100% 100%;
+  overflow: hidden;
+  background-attachment: local;
+  background-repeat: repeat;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+  background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
+}
