@@ -32,8 +32,7 @@ body {
   overflow-x: hidden;
   background-repeat: repeat;
   background-color: black;
-  background-size: 40vw;
-  max-width: 100vw;
+  background-size: 30vw;
   z-index: -1000;
   background-image: url("https://media.discordapp.net/attachments/893742457731293225/938076074368184371/backgroundRandomColors.png");
 }
@@ -55,7 +54,6 @@ h1 {
   user-select: none;
   position: relative;
   height: 13vh;
-  max-width: 100vw;
   text-align: center;
   font-size: 12vh;
   background: linear-gradient(-200deg, #ffb300, #ff6200);
@@ -78,7 +76,6 @@ h1 {
 h2 {
   -webkit-font-smoothing: auto;
   user-select: none;
-  max-width: 100vw;
   margin-top: 00%;
   position: relative;
   text-align: center;
@@ -92,6 +89,10 @@ h2 {
   font-style: normal;
   cursor: default;
   font-family: "Dongle", sans-serif;
+}
+#h2 {
+  margin-bottom: 0%;
+  margin-top: -1.7vh;
 }
 h3 {
   -webkit-font-smoothing: auto;
@@ -191,6 +192,13 @@ p3 {
   position: relative;
   transition: transform 1s ease;
 }
+.adobe2 {
+  display: block;
+  position: relative;
+  transition: transform 1s ease;
+  width: 15vh;
+  height: 15vh;
+}
 .discord {
   display: block;
   height: 5vh;
@@ -205,7 +213,7 @@ p3 {
   position: fixed;
   left: 2vh;
   top: 2vh;
-  width: calc(100% - 4vh);
+  width: calc(100vw - 4vh);
   height: calc(100vh - 4vh);
   outline: 0.4vh solid #ff9900;
   box-shadow: inset 0 0 1vh #ff9900;
@@ -265,7 +273,7 @@ p3 {
 .downnav {
   z-index: -3;
   bottom: -112.5vh;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   position: absolute;
   background-color: black;
@@ -277,6 +285,7 @@ p3 {
   display: flex;
 }
 .info {
+  width: 100vw;
   user-select: none;
   align-self: center;
   justify-content: center;
@@ -315,7 +324,6 @@ p3 {
 .bgline {
   width: 40vw;
   height: 300vh;
-  max-width: 100vw;
   background-color: rgb(0, 0, 0, 0.7);
   position: absolute;
   margin: auto;
@@ -328,7 +336,6 @@ p3 {
   backdrop-filter: blur(0.5vh);
   overflow: hidden;
   display: table;
-  min-width: 450px;
 }
 .gradient {
   width: 100%;
@@ -340,4 +347,76 @@ p3 {
   position: absolute;
   z-index: -10;
   background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
+}
+@media only screen and (max-width: 1250px) {
+  .bgline {
+    width: 100vw;
+  }
+  .scalehored {
+    animation-name: scaleHor;
+    animation-duration: 0s;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 8rem;
+    height: auto;
+  }
+  h2 {
+    font-size: 2.5rem;
+    height: auto;
+  }
+  #h2 {
+    margin-bottom: 0%;
+    margin-top: -3.7vh;
+  }
+  .icon {
+    height: 2vw;
+    background-size: 2em;
+    position: fixed;
+  }
+  .adobe2 {
+    height: 13vh;
+  }
+  .discord {
+    height: 5vh;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 1.2vw;
+    margin-top: 2vh;
+  }
+  body {
+    background-size: 600px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .bgline {
+    width: 100vw;
+  }
+  .scalehored {
+    animation-name: scaleHor;
+    animation-duration: 0s;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 4rem;
+    height: auto;
+  }
+  h2 {
+    font-size: 1.5rem;
+    height: auto;
+  }
+  #h2 {
+    margin-bottom: 0%;
+    margin-top: -3.7vh;
+  }
+  .icon {
+    height: 2vw;
+    background-size: 2em;
+    position: fixed;
+  }
+  .adobe2 {
+    height: 13vh;
+  }
 }
