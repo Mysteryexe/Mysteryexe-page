@@ -24,18 +24,36 @@
     width: 40vw;
   }
 }
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 img {
   image-rendering: auto;
 }
 body {
   margin: 0;
   overflow-x: hidden;
+  overflow: overlay;
+}
+#bg {
+  position: absolute;
+  margin-top: -15vh;
+  width: 100vw;
+  height: 205vh;
   background-repeat: repeat;
   background-color: black;
   background-size: 30vw;
   z-index: -1000;
   background-image: url("https://media.discordapp.net/attachments/893742457731293225/938076074368184371/backgroundRandomColors.png");
+  background-position: 0px 0px;
+  animation: animatedBackground 120s linear infinite;
 }
+
 .transparent {
   animation-name: transparecy;
   animation-duration: 3s;
@@ -173,12 +191,15 @@ p3 {
   display: list-item;
   margin-left: auto;
   margin-right: auto;
-  width: 50vh;
-  height: 50vh;
+  width: 40vh;
+  height: 40vh;
+  max-width: 450px;
+  max-width: 450px;
   position: relative;
   transition: transform 1s ease;
 }
-.center:hover {
+
+.center img:hover {
   transform: scale(1.1);
 }
 .icon {
@@ -348,6 +369,11 @@ p3 {
   z-index: -10;
   background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
 }
+.circlebg {
+  background: linear-gradient(-35deg, #ff9900, #ff6200);
+  border-radius: 100%;
+  z-index: -1;
+}
 @media only screen and (max-width: 1250px) {
   .bgline {
     width: 100vw;
@@ -386,8 +412,9 @@ p3 {
     margin-left: 1.2vw;
     margin-top: 2vh;
   }
-  body {
-    background-size: 600px;
+  #bg {
+    background-size: 50vw;
+    animation: animatedBackground 20s linear infinite;
   }
 }
 @media only screen and (max-width: 680px) {
@@ -418,5 +445,9 @@ p3 {
   }
   .adobe2 {
     height: 13vh;
+  }
+  .center {
+    width: 50vw;
+    height: 50vw;
   }
 }
