@@ -193,8 +193,6 @@ p3 {
   margin-right: auto;
   width: 40vh;
   height: 40vh;
-  max-width: 450px;
-  max-width: 450px;
   position: relative;
   transition: transform 1s ease;
 }
