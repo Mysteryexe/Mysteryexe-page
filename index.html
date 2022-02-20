@@ -54,9 +54,11 @@
       @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@500&family=Dongle:wght@300&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
     </style>
   </head>
   <body>
+    <div id="bg"></div>
     <div id="TopStuff">
       <div id="outlineNeon">
       </div>
@@ -65,20 +67,6 @@
           <audio id="backgroundmusic" style="display:none;" src="https://cdn.discordapp.com/attachments/893742457731293225/938763231269384232/Skalpel_-_MysteryEdited_-_Loop.mp3" autoplay loop>
         </div>
       </div>
-      <div
-        class="midScreen transparent"
-        style="
-          transform: translate(-50%, -77.5%);
-          left: 50%;
-          top: 50%;
-          background: linear-gradient(-35deg, #ff9900, #ff6200);
-          border-radius: 100%;
-          width: 35vh;
-          height: 35vh;
-          position: absolute;
-          z-index: -1;
-        "
-      ></div>
     </div>
     <div class="gradient" style="margin-top: 87.5vh; z-index: -1;"></div>
     <div
@@ -93,12 +81,16 @@
         background-image: url('https://www.seekpng.com/png/full/9-97643_mid-autumn-festival-illustration-city-building-vector-png.png');
       "
     ></div>
-    <div class="midScreen" style="margin-top: 15vh; max-width: 100%">
+    <div class="midScreen" style="margin-top: 15vh">
+      <div
+      class=" center circlebg transparent"
+      >
       <img
-        src="https://cdn.discordapp.com/attachments/893742457731293225/938053515018903632/3Dpfp.gif"
-        class="center animated"
-        alt="Our Icon"
-      />
+      src="https://cdn.discordapp.com/attachments/893742457731293225/938053515018903632/3Dpfp.gif"
+      class="center animated"
+      alt="Mystery.exe animated icon"
+    />
+    </div>
     </div>
     <div
       class="info animated"
@@ -243,7 +235,7 @@
       </h2>
       <h3 style="font-size: 3vh; margin-top: 0.1vh">
         Copyright
-        <a style="font-style: italic" href="http://mysterysupport.rf.gd/"
+        <a style="font-style: italic" href="https://mysteryexe.github.io"
           >MysterySupport</a
         >. All Rights Reserved.
       </h3>
