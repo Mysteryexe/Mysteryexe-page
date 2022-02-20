@@ -197,7 +197,7 @@ p3 {
   transition: transform 1s ease;
 }
 
-.center img:hover {
+.center:hover {
   transform: scale(1.1);
 }
 .icon {
@@ -368,9 +368,19 @@ p3 {
   background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
 }
 .circlebg {
-  background: linear-gradient(-35deg, #ff9900, #ff6200);
+  background-repeat: repeat;
+  overflow: hidden;
+  background-attachment: local;
+  background-size: 100% 100%;
+  background-image: url("http://25.media.tumblr.com/14582f15440df3e4400053562d56abe7/tumblr_mx6crhGppf1qjwbrfo1_500.gif");
   border-radius: 100%;
   z-index: -1;
+  box-shadow: 0 0 3px #fff inset, 0 0 5px #fff inset, 0 0 7px #fff inset,
+    0 0 0.5rem #ff9100 inset, 0 0 1rem #ff9100 inset, 0 0 1.5rem #ff9100 inset,
+    0 0 2rem #ff9100 inset, 0 0 2.5rem #ff9100 inset, 0 0 5rem #ff9100,
+    0 0 0.5rem rgb(255, 145, 0), 0 0 1rem rgb(255, 145, 0),
+    0 0 1.5rem rgb(255, 145, 0), 0 0 2rem rgb(255, 145, 0), 0 0 3px #fff,
+    0 0 5px #fff, 0 0 7px #fff;
 }
 @media only screen and (max-width: 1250px) {
   .bgline {
