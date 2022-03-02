@@ -398,7 +398,7 @@ rotate {
     font-size: 3.6vw;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-aspect-ratio: 9/20) {
   rotate {
     display: flex;
   }
