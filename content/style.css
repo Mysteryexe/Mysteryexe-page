@@ -1,0 +1,388 @@
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    left: 0;
+  }
+  99.9999% {
+    left: 100vw;
+  }
+  to {
+    transform: rotate(720deg);
+    left: 0;
+  }
+}
+.bgTexture {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  background-repeat: repeat;
+  background-size: 33.3vw;
+  z-index: -1000;
+  background-position: 0px 0px;
+  animation: animatedBackground 110s linear infinite;
+  background-image: url(/content/webp/stars.webp);
+  background-color: white;
+  overflow: hidden;
+}
+.gradient {
+  width: 100%;
+  padding-bottom: 10vh;
+  background-size: 100% 100%;
+  overflow: hidden;
+  background-repeat: repeat;
+  height: 25vh;
+  position: absolute;
+  z-index: -1;
+  background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
+}
+body {
+  background-color: rgb(95, 95, 95);
+  margin: 0;
+  overflow: overlay;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+nav {
+  position: fixed;
+  height: 100vh;
+  width: 51px;
+  left: 0;
+  background-color: black;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+}
+h1 {
+  overflow: visible;
+  font-family: "Do Hyeon", sans-serif;
+  color: rgba(255, 255, 255, 0.99);
+  font-size: 7.3vw;
+  height: auto;
+  width: calc(100vw - 50px);
+  left: 50px;
+  text-align: center;
+  z-index: -2;
+  line-height: 100vh;
+  margin: 0;
+  position: absolute;
+}
+h2 {
+  font-family: "Do Hyeon", sans-serif;
+  color: rgba(255, 255, 255, 0.99);
+  width: calc(100vw - 50px);
+  margin: 0;
+  text-align: center;
+  font-size: 5.3vw;
+  letter-spacing: 0.3vw;
+}
+p {
+  font-family: "Hubballi", cursive;
+  color: rgba(255, 255, 255, 0.9);
+  top: 3.6vw;
+  font-size: 1.7vw;
+  height: auto;
+  width: calc(100vw - 50px);
+  left: 50px;
+  text-align: center;
+  z-index: -2;
+  line-height: 100vh;
+  margin: 0;
+  position: absolute;
+}
+p2 {
+  position: absolute;
+  text-align: center;
+  width: calc(100vw - 50px);
+  height: auto;
+  font-size: 1.6vw;
+  font-family: "Hubballi", cursive;
+  color: rgba(255, 255, 255, 0.9);
+}
+amongus {
+  top: 20%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation-name: spin;
+  animation-duration: 25000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 0;
+  background-color: transparent;
+}
+amongus:hover {
+  transform: scale(2);
+}
+icon {
+  height: 24vh;
+  width: 30px;
+  z-index: 3;
+  transform: rotate(-90deg);
+  transition: transform 1s ease;
+}
+icon svg {
+  transition: fill 1s ease;
+}
+icon:hover {
+  transform: rotate(0deg);
+  transform: scale(1.2);
+}
+icon svg:hover {
+  fill: rgb(255, 255, 255);
+}
+rotate {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  display: none;
+  z-index: 100;
+}
+.lineleft {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+#sitsus {
+  top: calc(50vh - 5.75vw);
+  left: 39.5vw;
+  position: absolute;
+  width: auto;
+  height: 3vw;
+  z-index: -1;
+}
+#projectdiv {
+  width: 20%;
+  height: 30vw;
+  background-color: rgb(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 1vw;
+  overflow: hidden;
+  margin-bottom: 6vw;
+  backdrop-filter: blur(5px);
+}
+#projectscontainer {
+  width: calc(100%);
+  position: relative;
+  height: auto;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+#sus {
+  width: 100%;
+  z-index: 0;
+}
+#screen1 {
+  width: calc(100% - 50px);
+  height: 100vh;
+  margin-left: 50px;
+  position: relative;
+}
+#btmnav {
+  background-color: black;
+  width: calc(100vw - 50px);
+  height: 15vh;
+  position: relative;
+  margin-left: 50px;
+}
+#triagle-bottomleft {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+#svg1holder {
+  margin-left: calc(50vw - 50px);
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 50vw;
+}
+#svg1 {
+  float: right;
+  width: auto;
+  height: 100%;
+  aspect-ratio: unset;
+}
+#svg2holder {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+}
+#svg2 {
+  position: absolute;
+  left: 0;
+  width: auto;
+  height: 100%;
+  aspect-ratio: unset;
+}
+#svg3holder {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: calc(100vw - 50px);
+}
+#svg3 {
+  position: absolute;
+  float: right;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  aspect-ratio: unset;
+}
+#svg4holder {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+#svg4 {
+  position: absolute;
+  float: right;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  aspect-ratio: unset;
+}
+#cityholder {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: calc(100vw - 50px);
+  bottom: 0;
+}
+#citybg {
+  position: absolute;
+  float: right;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  aspect-ratio: unset;
+}
+#secondbg {
+  width: auto;
+  background-image: url(/content/webp/blksand.webp);
+  background-repeat: repeat;
+  background-size: 60vh;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1250px) {
+  .bgTexture {
+    background-size: 33vw;
+    animation: animatedBackground 70s linear infinite;
+  }
+  #svg1holder {
+    margin-left: calc(30vw - 50px);
+    width: 70vw;
+  }
+  #svg2holder {
+    width: 70vw;
+  }
+  #svg1 {
+    float: right;
+    width: auto;
+    height: 100%;
+  }
+  p2 {
+    font-size: 1.9vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .bgTexture {
+    background-size: 50vw;
+    animation: animatedBackground 30s linear infinite;
+  }
+  #svg1holder {
+    margin-left: calc(30vw - 50px);
+    width: 70vw;
+    height: 70vh;
+  }
+  #svg2holder {
+    margin-top: 30vh;
+    width: 70vw;
+    height: 70vh;
+  }
+  #svg1 {
+    float: right;
+    width: auto;
+    height: 100%;
+  }
+  p2 {
+    font-size: 2.6vw;
+  }
+  h2 {
+    font-size: 9.3vw;
+  }
+  #projectdiv {
+    width: 40%;
+    height: 50vw;
+    background-color: rgb(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .bgTexture {
+    background-size: 50vw;
+    animation: animatedBackground 30s linear infinite;
+  }
+  #svg1holder {
+    margin-left: calc(30vw - 50px);
+    width: 70vw;
+    height: 50vh;
+  }
+  #svg2holder {
+    margin-top: 50vh;
+    width: 70vw;
+    height: 50vh;
+  }
+  #svg1 {
+    float: right;
+    width: auto;
+    height: 100%;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+  p {
+    top: 5vw;
+    font-size: 3vw;
+  }
+  #sitsus {
+    top: calc(50vh - 6.8vw);
+    left: 36.5vw;
+    height: 3vw;
+  }
+  p2 {
+    font-size: 3.6vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  rotate {
+    display: flex;
+  }
+}
