@@ -44,6 +44,9 @@
   z-index: -1;
   background-image: url("https://cdn.discordapp.com/attachments/851753816881102869/938324317983350864/Gradient.png");
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgb(95, 95, 95);
   margin: 0;
@@ -131,21 +134,22 @@ amongus {
 amongus:hover {
   transform: scale(2);
 }
-icon {
+#icon {
   height: 24vh;
   width: 30px;
   z-index: 3;
   transform: rotate(-90deg);
   transition: transform 1s ease;
+  cursor: pointer;
 }
-icon svg {
+#icon svg {
   transition: fill 1s ease;
 }
-icon:hover {
+#icon:hover {
   transform: rotate(0deg);
   transform: scale(1.2);
 }
-icon svg:hover {
+#icon svg:hover {
   fill: rgb(255, 255, 255);
 }
 rotate {
@@ -197,6 +201,19 @@ rotate {
 #screen1 {
   width: calc(100% - 50px);
   height: 100vh;
+  margin-left: 50px;
+  position: relative;
+}
+#projects {
+  width: calc(100% - 50px);
+  height: auto;
+  margin-left: 50px;
+  position: relative;
+}
+#contact {
+  height: auto;
+  padding-bottom: 10vh;
+  width: calc(100% - 50px);
   margin-left: 50px;
   position: relative;
 }
