@@ -101,6 +101,16 @@ h2 {
   letter-spacing: 0.3vw;
   user-select: none;
 }
+h3{
+  font-family: "Do Hyeon", sans-serif;
+  color: rgba(255, 255, 255, 0.59);
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 4.3vw;
+  letter-spacing: 0.3vw;
+  user-select: none;
+}
 p {
   user-select: none;
   font-family: "Hubballi", cursive;
@@ -182,8 +192,7 @@ rotate {
   height: 3vw;
   z-index: 1;
 }
-#projectdiv {
-  width: 20%;
+.projectdiv {
   height: 30vw;
   background-color: rgb(0, 0, 0, 0.2);
   position: relative;
@@ -191,6 +200,24 @@ rotate {
   overflow: hidden;
   margin-bottom: 6vw;
   backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: height 2s ease-in-out;
+}
+#prj1{
+  transition: width 2s ease-in-out;
+  width: 20%;
+}
+#prj2{
+  transition: width 2s ease-in-out;
+  width: 20%;
+}
+#prj3{
+  transition: width 2s ease-in-out;
+  width: 20%;
+}
+#prj4{
+  transition: width 2s ease-in-out;
+  width: 20%;
 }
 #projectscontainer {
   width: calc(100%);
@@ -201,6 +228,7 @@ rotate {
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  transition: height 2s ease-in-out;
 }
 #sus {
   width: 100%;
@@ -224,6 +252,7 @@ rotate {
   height: auto;
   margin-left: 50px;
   position: relative;
+  transition: height 2s ease-in-out;
 }
 #contact {
   height: auto;
@@ -380,13 +409,29 @@ rotate {
   h2 {
     font-size: 9.3vw;
   }
-  #projectdiv {
+  .projectdiv {
     width: 40%;
     height: 50vw;
     background-color: rgb(0, 0, 0, 0.2);
     position: relative;
     border-radius: 1vw;
     overflow: hidden;
+  }
+  #prj1{
+    transition: width 2s ease-in-out;
+    width: 40%;
+  }
+  #prj2{
+    transition: width 2s ease-in-out;
+    width: 40%;
+  }
+  #prj3{
+    transition: width 2s ease-in-out;
+    width: 40%;
+  }
+  #prj4{
+    transition: width 2s ease-in-out;
+    width: 40%;
   }
 }
 @media only screen and (max-width: 650px) {
