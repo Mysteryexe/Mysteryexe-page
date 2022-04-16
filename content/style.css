@@ -75,6 +75,7 @@ nav {
   align-items: center;
   flex-direction: row;
   align-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 h1 {
   overflow: visible;
@@ -160,9 +161,11 @@ amongus {
   transform: rotate(-90deg);
   transition: transform 1s ease;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 #icon svg {
   transition: fill 1s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 #icon:hover {
   transform: rotate(0deg);
@@ -202,6 +205,7 @@ rotate {
   backdrop-filter: blur(5px);
   cursor: pointer;
   transition: height 2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 #prj1{
   transition: width 2s ease-in-out;
