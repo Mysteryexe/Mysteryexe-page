@@ -21,6 +21,8 @@
     <meta property="og:image:alt" content="Poster Image" />
     <link rel="stylesheet" href="content/style.css" />
     <link rel="stylesheet" href="content/scrollbar.css" />
+    <script src="content/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel = "icon" href = 
     "https://media.discordapp.net/attachments/851753816881102869/933990768132112434/Icon.png" 
             type = "image/x-icon">
@@ -239,16 +241,8 @@
         </shape>
         <h2 style="margin-bottom: 2vh;padding-top: 5vh;">PROJECTS</h2>
         <div id="projectscontainer">
-          <div id="projectdiv">
-            <shape style="bottom: 2vh;" id="svg4holder">
-              <img id="svg4" src="content/svg/bg6.svg" />
-            </shape>
-            <shape id="svg4holder">
-              <img id="svg4" src="content/svg/bg5.svg" />
-            </shape>
-            
-          </div>
-          <div id="projectdiv">
+          <div class="projectdiv" id="prj1" onclick="PrjAction1()">
+            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">3D</h3>
             <shape style="bottom: 2vh;" id="svg4holder">
               <img id="svg4" src="content/svg/bg6.svg" />
             </shape>
@@ -256,7 +250,8 @@
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
-          <div id="projectdiv">
+          <div class="projectdiv" id="prj2" onclick="PrjAction2()">
+            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">Code</h3>
             <shape style="bottom: 2vh;" id="svg4holder">
               <img id="svg4" src="content/svg/bg6.svg" />
             </shape>
@@ -264,9 +259,19 @@
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
-          <div id="projectdiv">
+          <div class="projectdiv" id="prj3" onclick="PrjAction3()">
+            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">Game</h3>
             <shape style="bottom: 2vh;" id="svg4holder">
               <img id="svg4" src="content/svg/bg6.svg" />
+            </shape>
+            <shape id="svg4holder">
+              <img id="svg4" src="content/svg/bg5.svg" />
+            </shape>
+          </div>
+          <div class="projectdiv" id="prj4" onclick="PrjAction4()">
+            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">Dunno</h3>
+            <shape style="bottom: 2vh;" id="svg4holder">
+              <img id="svg4" src="content/svg/bg6.svg"  />
             </shape>
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
