@@ -10,11 +10,13 @@ function betterPerf() {
       if (window.scrollY > offset){
          for (var i=0;i<x.length;i+=1){
             x[i].style.webkitAnimationPlayState = 'paused';
+            y[0].style.webkitAnimationPlayState = 'paused';
          }
       }
       else{
          for (var i=0;i<x.length;i+=1){
             x[i].style.webkitAnimationPlayState = 'running';
+            y[0].style.webkitAnimationPlayState = 'running';
          }
       }
      i++;
