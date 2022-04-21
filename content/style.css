@@ -108,9 +108,11 @@ h3{
   width: 100%;
   margin: 0;
   text-align: center;
-  font-size: 4.3vw;
+  font-size: 2.3vw;
   letter-spacing: 0.3vw;
   user-select: none;
+  position:absolute;
+  transition: opacity 1s ease;
 }
 p {
   user-select: none;
@@ -141,6 +143,20 @@ p2 {
   color: rgba(255, 255, 255, 0.9);
   padding-bottom: 2vh;
 }
+p3 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-size: 1.5vw;
+  font-family: "Hubballi", cursive;
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 2vh;
+  z-index: 10;
+  bottom: 0.8%;
+  transition: opacity 1s ease;
+  user-select: none;
+}
 amongus {
   top: 20%;
   position: absolute;
@@ -153,7 +169,9 @@ amongus {
   z-index: 2;
   background-color: transparent;
 }
-
+shape{
+  display:block;
+}
 #icon {
   height: 24vh;
   width: 30px;
@@ -195,6 +213,45 @@ rotate {
   height: 3vw;
   z-index: 1;
 }
+#next{
+  width: 3.5vw;
+  aspect-ratio: 1;
+  position:absolute;
+  right: 1vw;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 1vw;
+  user-select: none;
+}
+#previous{
+  width: 3.5vw;
+  aspect-ratio: 1;
+  position:absolute;
+  left: 1vw;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 1vw;
+  transform: rotate(180deg);
+  user-select: none;
+}
+inproject{
+  top: auto;
+  bottom: auto;
+  margin: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 1vw;
+  overflow: hidden;
+  cursor: default;
+}
 .projectdiv {
   height: 30vw;
   background-color: rgb(0, 0, 0, 0.2);
@@ -206,6 +263,12 @@ rotate {
   cursor: pointer;
   transition: height 2s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.projectimg{
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  position:absolute;
 }
 #prj1{
   transition: width 2s ease-in-out;
@@ -334,6 +397,8 @@ rotate {
   bottom: 0;
   aspect-ratio: unset;
   pointer-events: none;
+  opacity: 0.9;
+  z-index: -10;
 }
 #cityholder {
   position: absolute;
@@ -386,6 +451,9 @@ rotate {
   p2 {
     font-size: 1.9vw;
   }
+  p3 {
+    font-size: 1.5vw;
+  }
 }
 @media only screen and (max-width: 900px) {
   .bgTexture {
@@ -409,6 +477,9 @@ rotate {
   }
   p2 {
     font-size: 2.6vw;
+  }
+  p3 {
+    font-size: 2.1vw;
   }
   h2 {
     font-size: 9.3vw;
@@ -472,6 +543,10 @@ rotate {
   }
   p2 {
     font-size: 3.6vw;
+  }
+  p3 {
+    font-size: 2.9vw;
+    bottom: 0;
   }
 }
 @media only screen and (max-aspect-ratio: 9/20) {
