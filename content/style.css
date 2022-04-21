@@ -105,14 +105,16 @@ h2 {
 h3{
   font-family: "Do Hyeon", sans-serif;
   color: rgba(255, 255, 255, 0.59);
-  width: 100%;
+  width: calc( 100% - 5vh );
   margin: 0;
   text-align: center;
-  font-size: 2.3vw;
+  font-size: 4.3vw;
   letter-spacing: 0.3vw;
   user-select: none;
   position:absolute;
   transition: opacity 1s ease;
+  writing-mode:vertical-rl;
+  transform: skewY(7.5deg);
 }
 p {
   user-select: none;
@@ -157,6 +159,20 @@ p3 {
   transition: opacity 1s ease;
   user-select: none;
 }
+p4 {
+  left: 5vw;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  font-size: 2.5vw;
+  font-family: "Hubballi", cursive;
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 2vh;
+  z-index: 10;
+  bottom: 0.8%;
+  transition: opacity 1s ease;
+  user-select: none;
+}
 amongus {
   top: 20%;
   position: absolute;
@@ -171,6 +187,13 @@ amongus {
 }
 shape{
   display:block;
+}
+#desc {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-left: 5vw;
+  padding-top: 10%;
 }
 #icon {
   height: 24vh;
@@ -296,6 +319,7 @@ inproject{
   flex-direction: row-reverse;
   justify-content: space-evenly;
   transition: height 2s ease-in-out;
+  z-index: 10;
 }
 #sus {
   width: 100%;
@@ -399,6 +423,13 @@ inproject{
   pointer-events: none;
   opacity: 0.9;
   z-index: -10;
+}
+#flowerHolder{
+  position:absolute;
+  width: 72vw;
+  right: -23vw;
+  top: -26vw;
+  opacity: 0.5;
 }
 #cityholder {
   position: absolute;
@@ -547,6 +578,15 @@ inproject{
   p3 {
     font-size: 2.9vw;
     bottom: 0;
+  }
+  p4 {
+    font-size: 3.4vw;
+  }
+  #next{
+    width: 7.5vw;
+    }
+  #previous{
+    width: 7.5vw;
   }
 }
 @media only screen and (max-aspect-ratio: 9/20) {
