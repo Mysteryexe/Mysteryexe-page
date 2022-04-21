@@ -236,11 +236,11 @@
     </div>
     <div id="secondbg">
       <div id="projects">
-        <shape id="svg3holder" style="height:10vh">
+        <shape id="svg3holder" style="height:10vh;z-index:2">
           <img id="svg3" src="content/svg/bg4.svg" style="top: 0" />
         </shape>
         <shape id="flowerHolder">
-          <img id="svg1" src="content/svg/02142 Mandala.svg" style="top: 0" />
+          <img id="svg1" src="content/svg/02142 Mandala.svg" style="top: 0px" loading="lazy"/>
         </shape>
         <div id="desc">
           <p4><font size="10vw">Hi! I'am <b>Amirali</b>.</font><br>
@@ -248,7 +248,7 @@
             I have a diverse set of skills, ranging from design, to<br>
             <b>HTML • javascript • CSS • python • LUA</b><br>
             <br>
-            I'm also experinced with<br>
+            I'm also experienced with<br>
             <b>Adobe Photoshop • Adobe Premiere • Adobe After Effect</b><br>
             and in 3D workspace:
             <b>Sketchup • Blender • V-Ray </b>
@@ -260,53 +260,53 @@
         <h2 style="margin-bottom: 2vh;padding-top: 5vh;">PROJECTS</h2>
         <div id="projectscontainer">
           <div class="projectdiv" id="prj1" onclick="PrjAction1()">
-            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">Renders</h3>
+            <h3 style="margin-bottom: 2vh;padding-top: 3vh;">Renders</h3>
             <inproject>
               <div onclick="ChangeImage('prj1','next')" id="next">
                 <shape id="svg4holder">
-                  <img id="svg4" src="content/svg/next.svg" />
+                  <img id="svg4" src="content/svg/next.svg" loading="lazy" />
                 </shape>
               </div>
               <div onclick="ChangeImage('prj1','back')" id="previous">
                 <shape id="svg4holder">
-                  <img id="svg4" src="content/svg/next.svg" />
+                  <img id="svg4" src="content/svg/next.svg" loading="lazy"/>
                 </shape>
               </div>
               <p3>Vintage Room rendered with V-Ray</p3>
-              <img class="projectimg" src="content/images/RenderFinalWithMarker.png" >
+              <img class="projectimg" src="content/images/RenderFinalWithMarker.png" loading="lazy" >
             </inproject>
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
           <div class="projectdiv" id="prj2" onclick="PrjAction2()">
-            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">Gingernium</h3>
+            <h3 style="margin-bottom: 2vh;padding-top: 3vh;">Gingernium</h3>
             <inproject>
               <div onclick="ChangeImage('prj2','next')" id="next">
                 <shape id="svg4holder">
-                  <img id="svg4" src="content/svg/next.svg" />
+                  <img id="svg4" src="content/svg/next.svg" loading="lazy"/>
                 </shape>
               </div>
               <div onclick="ChangeImage('prj2','back')" id="previous">
                 <shape id="svg4holder">
-                  <img id="svg4" src="content/svg/next.svg" />
+                  <img id="svg4" src="content/svg/next.svg" loading="lazy"/>
                 </shape>
               </div>
               <p3>Gingernium, a showcase-styled game with interesting puzzles, Under Lua codes in Roblox (solo project).<br><a target="_blank" href=”https://www.roblox.com/games/7637898699/Gingernium-Adventure-Story”>Click here to play!</a></p3>
-              <img class="projectimg" src="content/images/Gingernium01.jpg" >
+              <img class="projectimg" src="content/images/Gingernium01.jpg" loading="lazy">
             </inproject>
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
           <div class="projectdiv" id="prj3" onclick="PrjAction3()">
-            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">soon</h3>
+            <h3 style="margin-bottom: 2vh;padding-top: 3vh;">soon</h3>
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
           <div class="projectdiv" id="prj4" onclick="PrjAction4()">
-            <h3 style="margin-bottom: 2vh;padding-top: 5vh;">soon</h3>
+            <h3 style="margin-bottom: 2vh;padding-top: 3vh;">soon</h3>
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
@@ -325,7 +325,7 @@
     </div>
     <div id="btmnav">
       <shape style="top: -20vh;width: 100%;height:20vh;position:absolute;z-index: 0;opacity:0.1">
-        <img id="svg3" src="content/svg/tress.svg" />
+        <img id="svg3" src="content/svg/tress.svg" loading="lazy"/>
       </shape>
       <shape id="svg3holder" style="top:-20vh;height:20vh;"">
         <img id="svg3" src="content/svg/bg3.svg" />
@@ -335,14 +335,15 @@
         style="
           width: 10vh;
           left: calc(50vw - 25px - 5vh);
-          top: -1.5vh;
+          top: -2.8vh;
           position: absolute;
         "
         src="/content/webp/amongus.gif"
+        loading="lazy"
       />
-      <p2 style="bottom: 2vh;padding-bottom: 0vh;"
-        >Copyright 2022 MysteryStudio. All Rights Reserved.
-
+      <p2 style="bottom: 1.5vh;padding-bottom: 0vh;"
+        >
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />Copyright 2022 MysteryStudio. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons International License</a>.
       </p2>
     </div>
   </body>
