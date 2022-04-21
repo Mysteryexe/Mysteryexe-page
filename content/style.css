@@ -430,6 +430,7 @@ inproject{
   right: -23vw;
   top: -26vw;
   opacity: 0.5;
+  z-index: 0;
 }
 #cityholder {
   position: absolute;
