@@ -351,6 +351,7 @@ inproject{
   width: calc(100% - 50px);
   margin-left: 50px;
   position: relative;
+  z-index: 10;
 }
 #btmnav {
   background-color: black;
