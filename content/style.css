@@ -132,8 +132,19 @@ p {
   position: absolute;
 }
 a {
+  transition: all 0.5s ease-in-out;
   color: white;
   font-weight: bold;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  font-style: bold;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(0, 0, 0);
+  box-shadow: inset 500px 0 0 0 #ffffff;
+}
+a#icon:hover{
+  box-shadow: inset 500px 0 0 0  rgb(0, 0, 0, 0);
 }
 p2 {
   position: absolute;
