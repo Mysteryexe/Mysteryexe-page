@@ -6,6 +6,12 @@ function betterPerf() {
    setTimeout(function() {
       var x = document.getElementsByTagName("amongus");
       var y = document.getElementsByClassName("bgTexture");
+      var elems2 = document.getElementsByTagName('inproject');
+      for (var i=0;i<elems2.length;i+=1){
+         if (elems2[i].style.opacity <= 0.05){
+            elems2[i].style.visibility = "hidden";
+         }
+      }
       var offset = y[0].offsetHeight
       if (window.scrollY > offset){
          for (var i=0;i<x.length;i+=1){
@@ -38,6 +44,7 @@ function resizesvg(y){
       elems4[i].style.opacity = '1';
    }
    for (var i=0;i<elems.length;i+=1){
+      elems[i].style.visibility = "visible";
       elems[i].style.opacity = '1';
    }
    for (var i=0;i<elems3.length;i+=1){
@@ -79,9 +86,11 @@ function ChangeImage(x,status){
    const t = z[0].getElementsByClassName("projectimg");
    const text = z[0].getElementsByTagName("p3");
    if (a[num] == "content/images/endmsg.png"){
+      text[0].style.visibility = "hidden";
       text[0].style.opacity = 0
    }
    else{
+      text[0].style.visibility = "visible";
       text[0].style.opacity = 1
    }
    t[0].src = a[num];
