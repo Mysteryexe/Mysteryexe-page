@@ -1,9 +1,18 @@
 num = 0;
 var i = 1;
 var lastPrj;
+document.addEventListener("mousemove", parallax);
+function parallax(event) {
+  this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
+    const position = shift.getAttribute("value");
+    const x = (window.innerWidth - event.pageX * position) / 90;
+    const y = (window.innerHeight - event.pageY * position) / 90;
+
+    shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+}
 function betterPerf() {
   setTimeout(function () {
-    var x = document.getElementsByTagName("amongus");
     var y = document.getElementsByClassName("bgTexture");
     var elems2 = document.getElementsByTagName("inproject");
     for (var i = 0; i < elems2.length; i += 1) {
@@ -14,12 +23,10 @@ function betterPerf() {
     var offset = y[0].offsetHeight;
     if (window.scrollY > offset) {
       for (var i = 0; i < x.length; i += 1) {
-        x[i].style.webkitAnimationPlayState = "paused";
         y[0].style.webkitAnimationPlayState = "paused";
       }
     } else {
       for (var i = 0; i < x.length; i += 1) {
-        x[i].style.webkitAnimationPlayState = "running";
         y[0].style.webkitAnimationPlayState = "running";
       }
     }
