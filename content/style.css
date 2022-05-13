@@ -3,38 +3,32 @@
     background-position: 0 0;
   }
   to {
-    background-position: 100% 0;
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-    left: 0;
-  }
-  99.9999% {
-    left: 100vw;
-  }
-  to {
-    transform: rotate(720deg);
-    left: 0;
+    background-position: 100% 200%;
   }
 }
 .bgTexture {
-  width: 100%;
-  height: 100vh;
+  width: 150vw;
+  height: 150vh;
+  top: -10vh;
   margin: 0;
   z-index: 0;
   position: absolute;
   background-repeat: repeat;
   background-size: 33.3vw;
   background-position: 0px 0px;
-  animation: animatedBackground 110s linear infinite;
-  background-image: url(/content/webp/stars.webp);
+  animation: animatedBackground 200s linear infinite;
+  background-image: url(/content/sky.png);
   background-color: white;
   overflow: hidden;
   pointer-events: visible;
 }
-
+.bgcontainer {
+  overflow: hidden;
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  width: 100vw;
+}
 .gradient {
   width: 100%;
   padding-bottom: 10vh;
@@ -81,9 +75,9 @@ nav {
 h1 {
   overflow: visible;
   font-family: "Do Hyeon", sans-serif;
-  color: #fffffffc;
+  color: #000000fc;
   font-size: 7.3vw;
-  height: auto;
+  height: 7vw;
   width: calc(100vw - 50px);
   left: 50px;
   text-align: center;
@@ -93,14 +87,16 @@ h1 {
   position: absolute;
   user-select: none;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #ffffff72;
+  -webkit-text-stroke-color: #00000072;
   -webkit-font-smoothing: antialiased;
+  top: 12.5vh;
 }
 h1 span {
-  transition: all 0.5s;
+  transition: color 0.5s;
+  transition: -webkit-text-stroke-color 0.5s;
 }
 h1 span:hover {
-  color: #ffffff33;
+  color: #000000;
   background: url(https://cycling74-web-uploads.s3.amazonaws.com/5600596f5cc0a22f43bf9091/2021-03-16T23:50:16Z/line-noise-loop.gif)
     10% 0 / cover no-repeat;
   background-clip: border-box;
@@ -134,8 +130,8 @@ h3 {
 p {
   user-select: none;
   font-family: "Hubballi", cursive;
-  color: rgba(255, 255, 255, 0.9);
-  top: 3.6vw;
+  color: rgba(0, 0, 0, 0.9);
+  top: calc(9vh + 5.6vw);
   font-size: 1.7vw;
   height: auto;
   width: calc(100vw - 50px);
@@ -199,16 +195,6 @@ p4 {
   transition: opacity 1s ease;
   user-select: none;
 }
-amongus {
-  top: 20%;
-  position: absolute;
-  animation-name: spin;
-  animation-duration: 25000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 2;
-  background-color: transparent;
-}
 shape {
   display: block;
 }
@@ -251,14 +237,6 @@ rotate {
   width: 100%;
   height: 100vh;
   background-color: black;
-}
-#sitsus {
-  top: calc(50vh - 5.75vw);
-  left: 39.5vw;
-  position: absolute;
-  width: auto;
-  height: 3vw;
-  z-index: 1;
 }
 #next {
   width: 3.5vw;
@@ -345,15 +323,6 @@ inproject {
   justify-content: space-evenly;
   transition: height 2s ease-in-out;
   z-index: 10;
-}
-#sus {
-  width: 100%;
-  z-index: 0;
-  transition: transform 2s ease-in-out;
-  animation-fill-mode: forwards;
-}
-#sus:hover {
-  transform: rotate(120deg);
 }
 #screen1 {
   width: calc(100% - 50px);
@@ -580,7 +549,7 @@ inproject {
 @media only screen and (max-width: 650px) {
   .bgTexture {
     background-size: 50vw;
-    animation: animatedBackground 30s linear infinite;
+    animation: animatedBackground 50s linear infinite;
   }
   #svg1holder {
     margin-left: calc(30vw - 50px);
@@ -603,11 +572,6 @@ inproject {
   p {
     top: 5vw;
     font-size: 3vw;
-  }
-  #sitsus {
-    top: calc(50vh - 6.8vw);
-    left: 36.5vw;
-    height: 3vw;
   }
   p2 {
     font-size: 3.6vw;
