@@ -471,7 +471,7 @@ inproject {
 @media only screen and (max-width: 1250px) {
   .bgTexture {
     background-size: 33vw;
-    animation: animatedBackground 70s linear infinite;
+    animation: animatedBackground 250s linear infinite;
   }
   #svg1holder {
     margin-left: calc(30vw - 50px);
@@ -485,6 +485,10 @@ inproject {
     width: auto;
     height: 100%;
   }
+  p {
+    top: calc(10.5vh + 5.6vw);
+    font-size: 2.2vw;
+  }
   p2 {
     font-size: 1.9vw;
   }
@@ -495,7 +499,7 @@ inproject {
 @media only screen and (max-width: 900px) {
   .bgTexture {
     background-size: 50vw;
-    animation: animatedBackground 30s linear infinite;
+    animation: animatedBackground 200s linear infinite;
   }
   #svg1holder {
     margin-left: calc(30vw - 50px);
@@ -570,8 +574,7 @@ inproject {
     font-size: 10vw;
   }
   p {
-    top: 5vw;
-    font-size: 3vw;
+    opacity: 0;
   }
   p2 {
     font-size: 3.6vw;
