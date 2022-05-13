@@ -17,7 +17,7 @@
   background-size: 33.3vw;
   background-position: 0px 0px;
   animation: animatedBackground 200s linear infinite;
-  background-image: url(/content/sky.png);
+  background-image: url(/content/sky.webp);
   background-color: white;
   overflow: hidden;
   pointer-events: visible;
