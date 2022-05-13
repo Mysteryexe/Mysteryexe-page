@@ -76,11 +76,12 @@ nav {
   flex-direction: row;
   align-content: center;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0vw 0vh 2vw #000000);
 }
 h1 {
   overflow: visible;
   font-family: "Do Hyeon", sans-serif;
-  color: rgba(255, 255, 255, 0.99);
+  color: #fffffffc;
   font-size: 7.3vw;
   height: auto;
   width: calc(100vw - 50px);
@@ -91,6 +92,20 @@ h1 {
   margin: 0;
   position: absolute;
   user-select: none;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #ffffff72;
+  -webkit-font-smoothing: antialiased;
+}
+h1 span {
+  transition: all 0.5s;
+}
+h1 span:hover {
+  color: #ffffff33;
+  background: url(https://cycling74-web-uploads.s3.amazonaws.com/5600596f5cc0a22f43bf9091/2021-03-16T23:50:16Z/line-noise-loop.gif)
+    10% 0 / cover no-repeat;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h2 {
   font-family: "Do Hyeon", sans-serif;
