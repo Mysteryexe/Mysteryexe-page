@@ -52,19 +52,19 @@ function resizesvg(y) {
 function ChangeImage(x, status) {
   if (x == "prj1") {
     var a = [
-      "content/images/RenderFinalWithMarker.png",
-      "content/images/endmsg.png",
+      "content/images/RenderFinalWithMarker.webp",
+      "content/images/endmsg.webp",
     ];
   }
   if (x == "prj2") {
     var a = [
-      "content/images/Gingernium01.jpg",
-      "content/images/Gingernium02.png",
-      "content/images/Gingernium03.jpg",
-      "content/images/Gingernium04.jpg",
-      "content/images/Gingernium05.jpg",
-      "content/images/Gingernium06.jpg",
-      "content/images/endmsg.png",
+      "content/images/Gingernium01.webp",
+      "content/images/Gingernium02.webp",
+      "content/images/Gingernium03.webp",
+      "content/images/Gingernium04.webp",
+      "content/images/Gingernium05.webp",
+      "content/images/Gingernium06.webp",
+      "content/images/endmsg.webp",
     ];
   }
   if (x == "prj3") {
@@ -94,7 +94,7 @@ function ChangeImage(x, status) {
   const z = y.getElementsByTagName("inproject");
   const t = z[0].getElementsByClassName("projectimg");
   const text = z[0].getElementsByTagName("p3");
-  if (a[num] == "content/images/endmsg.png") {
+  if (a[num] == "content/images/endmsg.webp") {
     text[0].style.visibility = "hidden";
     text[0].style.opacity = 0;
   } else {
