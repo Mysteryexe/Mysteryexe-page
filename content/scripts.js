@@ -1,32 +1,32 @@
 num = 0;
 var i = 1;
 var lastPrj;
-if (window.matchMedia("(any-hover: none)").matches) {
-  document.addEventListener("mousemove", parallax);
-  function parallax(event) {
-    this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
-      const position = shift.getAttribute("value");
-      var elems2 = document.getElementsByClassName("bgcontainer");
-      const x = (window.innerWidth - event.pageX * position) / 90;
-      const y = (window.innerHeight - event.pageY * position) / 90;
-      if (elems2[0].offsetHeight * 1.5 > event.pageY) {
-        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-      } else {
-        shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
-      }
-    });
-  }
+document.addEventListener("mousemove", parallax);
+function parallax(event) {
+  this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
+    const position = shift.getAttribute("value");
+    var elems2 = document.getElementsByClassName("bgcontainer");
+    const x = (window.innerWidth - event.pageX * position) / 90;
+    const y = (window.innerHeight - event.pageY * position) / 90;
+    if (elems2[0].offsetHeight * 1.5 > event.pageY) {
+      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    } else {
+      shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
+    }
+  });
 }
+
 function betterPerf() {
   setTimeout(function () {
     var y = document.getElementsByClassName("bgTexture");
+    var elems1 = document.getElementsByClassName("bgcontainer");
     var elems2 = document.getElementsByTagName("inproject");
     for (var i = 0; i < elems2.length; i += 1) {
       if (elems2[i].style.opacity <= 0.05) {
         elems2[i].style.visibility = "hidden";
       }
     }
-    var offset = y[0].offsetHeight;
+    var offset = elems1[0].offsetHeight;
     if (window.scrollY > offset) {
       y[0].style.webkitAnimationPlayState = "paused";
     } else {
