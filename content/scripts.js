@@ -5,10 +5,15 @@ document.addEventListener("mousemove", parallax);
 function parallax(event) {
   this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
     const position = shift.getAttribute("value");
+    var elems2 = document.getElementsByClassName("bgcontainer");
+    console.log(event.pageY, elems2[0].offsetHeight);
     const x = (window.innerWidth - event.pageX * position) / 90;
     const y = (window.innerHeight - event.pageY * position) / 90;
-
-    shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    if (elems2[0].offsetHeight * 1.5 > event.pageY) {
+      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    } else {
+      shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
+    }
   });
 }
 function betterPerf() {
