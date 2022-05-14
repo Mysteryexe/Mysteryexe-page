@@ -7,7 +7,6 @@ if (window.matchMedia("(any-hover: none)").matches) {
     this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
       const position = shift.getAttribute("value");
       var elems2 = document.getElementsByClassName("bgcontainer");
-      console.log(event.pageY, elems2[0].offsetHeight);
       const x = (window.innerWidth - event.pageX * position) / 90;
       const y = (window.innerHeight - event.pageY * position) / 90;
       if (elems2[0].offsetHeight * 1.5 > event.pageY) {
