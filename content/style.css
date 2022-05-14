@@ -597,3 +597,43 @@ inproject {
     display: flex;
   }
 }
+@media only screen and (max-aspect-ratio: 4/3) {
+  #svg1holder {
+    margin-left: calc(30vw - 50px);
+    width: 70vw;
+    height: 60vh;
+  }
+  #svg2holder {
+    margin-top: 40vh;
+    width: 70vw;
+    height: 60vh;
+  }
+  #svg1 {
+    float: right;
+    width: auto;
+    height: 100%;
+  }
+  p {
+    top: calc(11vh + 5.6vw);
+  }
+}
+@media only screen and (max-aspect-ratio: 9/10) {
+  #svg1holder {
+    margin-left: calc(30vw - 50px);
+    width: 70vw;
+    height: 50vh;
+  }
+  #svg2holder {
+    margin-top: 55vh;
+    width: 70vw;
+    height: 45vh;
+  }
+  #svg1 {
+    float: right;
+    width: auto;
+    height: 100%;
+  }
+  p {
+    top: calc(11vh + 5.6vw);
+  }
+}
