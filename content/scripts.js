@@ -1,20 +1,22 @@
 num = 0;
 var i = 1;
 var lastPrj;
-document.addEventListener("mousemove", parallax);
-function parallax(event) {
-  this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
-    const position = shift.getAttribute("value");
-    var elems2 = document.getElementsByClassName("bgcontainer");
-    console.log(event.pageY, elems2[0].offsetHeight);
-    const x = (window.innerWidth - event.pageX * position) / 90;
-    const y = (window.innerHeight - event.pageY * position) / 90;
-    if (elems2[0].offsetHeight * 1.5 > event.pageY) {
-      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    } else {
-      shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
-    }
-  });
+if (window.matchMedia("(any-hover: none)").matches) {
+  document.addEventListener("mousemove", parallax);
+  function parallax(event) {
+    this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
+      const position = shift.getAttribute("value");
+      var elems2 = document.getElementsByClassName("bgcontainer");
+      console.log(event.pageY, elems2[0].offsetHeight);
+      const x = (window.innerWidth - event.pageX * position) / 90;
+      const y = (window.innerHeight - event.pageY * position) / 90;
+      if (elems2[0].offsetHeight * 1.5 > event.pageY) {
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      } else {
+        shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
+      }
+    });
+  }
 }
 function betterPerf() {
   setTimeout(function () {
@@ -27,13 +29,9 @@ function betterPerf() {
     }
     var offset = y[0].offsetHeight;
     if (window.scrollY > offset) {
-      for (var i = 0; i < x.length; i += 1) {
-        y[0].style.webkitAnimationPlayState = "paused";
-      }
+      y[0].style.webkitAnimationPlayState = "paused";
     } else {
-      for (var i = 0; i < x.length; i += 1) {
-        y[0].style.webkitAnimationPlayState = "running";
-      }
+      y[0].style.webkitAnimationPlayState = "running";
     }
     i++;
     if (i < 10) {
