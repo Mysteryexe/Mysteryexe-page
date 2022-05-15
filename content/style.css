@@ -121,11 +121,12 @@ h3 {
   text-align: center;
   font-size: 4.3vw;
   letter-spacing: 0.3vw;
-  user-select: none;
   position: absolute;
   transition: opacity 1s ease;
   writing-mode: vertical-rl;
   transform: skewY(7.5deg);
+  user-select: none;
+  pointer-events: none;
 }
 p {
   user-select: none;
@@ -295,6 +296,19 @@ inproject {
   max-height: 100%;
   position: absolute;
 }
+#prjicon {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  align-self: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: transform 1s cubic-bezier(1, -0.01, 0.67, 1);
+  animation-play-state: paused;
+}
 #prj1 {
   transition: width 2s ease-in-out;
   width: 20%;
@@ -417,6 +431,17 @@ inproject {
   pointer-events: none;
   opacity: 0.9;
   z-index: -10;
+}
+#svg5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 #flowerHolder {
   position: absolute;
