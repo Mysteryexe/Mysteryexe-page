@@ -15,7 +15,6 @@ function parallax(event) {
     }
   });
 }
-
 function betterPerf() {
   setTimeout(function () {
     var y = document.getElementsByClassName("bgTexture");
@@ -113,7 +112,20 @@ function ChangeImage(x, status) {
   t[0].src = a[num];
   lastPrj = x;
 }
+function openEffect(img) {
+  const images = ["render", "gingernium", "soon1", "soon2"];
+  const icon = document.getElementsByClassName(img);
+  icon[0].style.transform = "scale(10) rotate(720deg)";
+  for (var i = 0; i < images.length; i += 1) {
+    if (images[i] == img) {
+    } else {
+      const smallIcon = document.querySelectorAll("." + images[i]);
+      smallIcon[0].style.transform = "scale(1)";
+    }
+  }
+}
 function PrjAction1() {
+  openEffect("render");
   if ($(window).width() < 900) {
     const x = document.getElementById("prj1");
     x.style.width = "90%";
@@ -131,6 +143,7 @@ function PrjAction1() {
   }
 }
 function PrjAction2() {
+  openEffect("gingernium");
   if ($(window).width() < 900) {
     document.getElementById("prj1").style.width = "30%";
     const x = document.getElementById("prj2");
@@ -148,6 +161,7 @@ function PrjAction2() {
   }
 }
 function PrjAction3() {
+  openEffect("soon1");
   if ($(window).width() < 900) {
     document.getElementById("prj1").style.width = "30%";
     document.getElementById("prj2").style.width = "30%";
@@ -165,6 +179,7 @@ function PrjAction3() {
   }
 }
 function PrjAction4() {
+  openEffect("soon2");
   if ($(window).width() < 900) {
     document.getElementById("prj1").style.width = "30%";
     document.getElementById("prj2").style.width = "30%";
