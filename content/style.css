@@ -127,6 +127,7 @@ h3 {
   transform: skewY(7.5deg);
   user-select: none;
   pointer-events: none;
+  color: rgba(255, 255, 255, 0);
 }
 p {
   user-select: none;
