@@ -81,24 +81,28 @@ function ChangeImage(image, status) {
 function openEffect(img) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const icon = document.getElementsByClassName(img);
-  icon[0].style.transform = "translatey(-120%) skewY(22.5deg)";
+  icon[0].style.transform = "translatey(-70vh) skewY(22.5deg)";
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == img) {
     } else {
       const smallIcon = document.querySelectorAll("." + images[i]);
-      smallIcon[0].style.transform = "scale(1)";
+      smallIcon[0].style.transform = "translatey(0vh)";
     }
   }
 }
 function PrjAction(x) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const projects = document.getElementsByClassName("projectdiv");
+  const decoration = document.querySelectorAll("#svgprjholder");
+  console.log(decoration);
   if ($(window).width() < 900) {
     var small = "30%";
     var big = "90%";
+    Order = "True";
   } else {
     var small = "15%";
     var big = "45%";
+    Order = "false";
   }
   openEffect(x);
   for (var i = 0; i < images.length; i += 1) {
@@ -106,13 +110,27 @@ function PrjAction(x) {
       if (projects[i].style.width != big) {
         ChangeImage(images[i], "back");
       }
+      if (Order == "True") {
+        projects[i].style.order = "1";
+      }
       projects[i].style.width = big;
       var imageContainer = projects[i].querySelectorAll("inproject");
-      imageContainer[0].style.transform = "translatey(0%)";
+      imageContainer[0].style.transform = "translatey(0vh)";
+      decoration[i].querySelectorAll("#svg4")[0].style.transform =
+        "translatey(100%)";
+      decoration[i].querySelectorAll("#svg4Top")[0].style.transform =
+        "translatey(-100%)";
     } else {
       projects[i].style.width = small;
+      if (Order == "True") {
+        projects[i].style.order = "2";
+      }
+      decoration[i].querySelectorAll("#svg4")[0].style.transform =
+        "translatey(0%)";
+      decoration[i].querySelectorAll("#svg4Top")[0].style.transform =
+        "translatey(0%)";
       var imageContainer = projects[i].querySelectorAll("inproject");
-      imageContainer[0].style.transform = "translatey(120%) skewY(22.5deg)";
+      imageContainer[0].style.transform = "translatey(70vh) skewY(22.5deg)";
     }
   }
 }
