@@ -264,21 +264,21 @@ rotate {
   user-select: none;
 }
 inproject {
+  transform: translatey(120%);
   top: auto;
   bottom: auto;
   margin: 15px;
   width: calc(100% - 30px);
   height: calc(100% - 30px);
   position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 2s ease-in-out;
+  transition: transform 1s cubic-bezier(1, -0.01, 0.67, 1);
   align-items: center;
   justify-content: center;
   display: flex;
   border-radius: 1vw;
   overflow: hidden;
   cursor: default;
+  background-color: #000000;
 }
 .projectdiv shape svg {
   fill: black;
@@ -324,19 +324,7 @@ inproject {
   animation-play-state: paused;
   fill: red;
 }
-#prj1 {
-  transition: width 2s ease-in-out;
-  width: 20%;
-}
-#prj2 {
-  transition: width 2s ease-in-out;
-  width: 20%;
-}
-#prj3 {
-  transition: width 2s ease-in-out;
-  width: 20%;
-}
-#prj4 {
+#prj {
   transition: width 2s ease-in-out;
   width: 20%;
 }
