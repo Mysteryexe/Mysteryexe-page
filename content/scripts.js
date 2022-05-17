@@ -2,6 +2,8 @@ num = 0;
 var i = 1;
 var lastPrj;
 var curImage = 1;
+const observer = lozad();
+observer.observe();
 function detectMob() {
   const toMatch = [
     /Android/i,
