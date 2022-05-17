@@ -181,7 +181,7 @@
         </div>
         <h2 style="margin-bottom: 2vh;padding-top: 5vh;">PROJECTS</h2>
         <div id="projectscontainer">
-          <div class="projectdiv" id="prj1" onclick="PrjAction1()">
+          <div class="projectdiv" id="prj" onclick="PrjAction('render')">
             <shape id="prjicon" class="render">
               <?xml version="1.0" encoding="UTF-8" ?>
               <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -195,12 +195,12 @@
             </shape>
             <h3 style="margin-bottom: 2vh;padding-top: 3vh;">Renders</h3>
             <inproject>
-              <div onclick="ChangeImage('prj1','next')" id="next">
+              <div onclick="ChangeImage('render','next')" id="next">
                 <shape id="svg4holder">
                   <img id="svg4" src="content/svg/next.svg"/>
                 </shape>
               </div>
-              <div onclick="ChangeImage('prj1','back')" id="previous">
+              <div onclick="ChangeImage('render','back')" id="previous">
                 <shape id="svg4holder">
                   <img id="svg4" src="content/svg/next.svg"/>
                 </shape>
@@ -212,7 +212,7 @@
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
-          <div class="projectdiv" id="prj2" onclick="PrjAction2()">
+          <div class="projectdiv" id="prj" onclick="PrjAction('gingernium')">
             <shape id="prjicon" class="gingernium">
               <?xml version="1.0" encoding="UTF-8" ?>
               <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -226,12 +226,12 @@
             </shape>
             <h3 style="margin-bottom: 2vh;padding-top: 3vh;">Gingernium</h3>
             <inproject>
-              <div onclick="ChangeImage('prj2','next')" id="next">
+              <div onclick="ChangeImage('gingernium','next')" id="next">
                 <shape id="svg4holder">
                   <img id="svg4" src="content/svg/next.svg"/>
                 </shape>
               </div>
-              <div onclick="ChangeImage('prj2','back')" id="previous">
+              <div onclick="ChangeImage('gingernium','back')" id="previous">
                 <shape id="svg4holder">
                   <img id="svg4" src="content/svg/next.svg"/>
                 </shape>
@@ -243,7 +243,7 @@
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
           </div>
-          <div class="projectdiv" id="prj3" onclick="PrjAction3()">
+          <div class="projectdiv" id="prj" onclick="PrjAction('soon1')">
             <shape id="prjicon" class="soon1">
               <?xml version="1.0" encoding="UTF-8" ?>
               <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -269,8 +269,22 @@
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
+            <inproject>
+              <div onclick="ChangeImage('soon1','next')" id="next">
+                <shape id="svg4holder">
+                  <img id="svg4" src="content/svg/next.svg"/>
+                </shape>
+              </div>
+              <div onclick="ChangeImage('soon1','back')" id="previous">
+                <shape id="svg4holder">
+                  <img id="svg4" src="content/svg/next.svg"/>
+                </shape>
+              </div>
+              <p3>coming soon</p3>
+              <img class="projectimg" src="">
+            </inproject>
           </div>
-          <div class="projectdiv" id="prj4" onclick="PrjAction4()">
+          <div class="projectdiv" id="prj" onclick="PrjAction('soon2')">
             <shape id="prjicon" class="soon2">
               <shape id="prjicon" class="soon2">
                 <?xml version="1.0" encoding="UTF-8" ?>
@@ -298,6 +312,20 @@
             <shape id="svg4holder">
               <img id="svg4" src="content/svg/bg5.svg" />
             </shape>
+            <inproject>
+              <div onclick="ChangeImage('soon2','next')" id="next">
+                <shape id="svg4holder">
+                  <img id="svg4" src="content/svg/next.svg"/>
+                </shape>
+              </div>
+              <div onclick="ChangeImage('soon2','back')" id="previous">
+                <shape id="svg4holder">
+                  <img id="svg4" src="content/svg/next.svg"/>
+                </shape>
+              </div>
+              <p3>coming soon</p3>
+              <img class="projectimg" src="">
+            </inproject>
           </div>
         </div>
       </div>
