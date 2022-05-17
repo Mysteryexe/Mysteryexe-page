@@ -94,7 +94,6 @@ function PrjAction(x) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const projects = document.getElementsByClassName("projectdiv");
   const decoration = document.querySelectorAll("#svgprjholder");
-  console.log(decoration);
   if ($(window).width() < 900) {
     var small = "30%";
     var big = "90%";
