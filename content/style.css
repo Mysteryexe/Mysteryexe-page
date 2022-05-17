@@ -404,7 +404,7 @@ inproject {
 }
 #svg3holder {
   position: absolute;
-  overflow: hidden;
+  overflow: visible;
   height: 100vh;
   width: calc(100vw - 50px);
   pointer-events: none;
