@@ -81,7 +81,7 @@ function ChangeImage(image, status) {
 function openEffect(img) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const icon = document.getElementsByClassName(img);
-  icon[0].style.transform = "translatey(-120%)";
+  icon[0].style.transform = "translatey(-120%) skewY(22.5deg)";
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == img) {
     } else {
@@ -100,7 +100,6 @@ function PrjAction(x) {
     var small = "15%";
     var big = "45%";
   }
-
   openEffect(x);
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == x) {
@@ -113,7 +112,7 @@ function PrjAction(x) {
     } else {
       projects[i].style.width = small;
       var imageContainer = projects[i].querySelectorAll("inproject");
-      imageContainer[0].style.transform = "translatey(120%)";
+      imageContainer[0].style.transform = "translatey(120%) skewY(22.5deg)";
     }
   }
 }
