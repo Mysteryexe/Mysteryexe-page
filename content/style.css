@@ -288,6 +288,7 @@ inproject {
 }
 .projectdiv {
   height: 30vw;
+  width: auto;
   background-color: rgb(0, 0, 0, 0.5);
   position: relative;
   border-radius: 1vw;
