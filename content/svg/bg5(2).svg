@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="258" viewBox="0 0 500 258">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke-width: 1px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 3.15px;
+      }
+
+      .cls-2 {
+        opacity: 0.89;
+      }
+
+      .cls-3 {
+        opacity: 0.91;
+      }
+
+      .cls-4 {
+        stroke-width: 1.87px;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 4.43px;
+      }
+
+      .cls-6 {
+        opacity: 0.83;
+      }
+
+      .cls-7 {
+        stroke-width: 5.71px;
+        opacity: 0.86;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M-5,211H80l9,9h35l26,26h60l28-28h52l18,18h35l8,8h21l26-26h21l10-10h83v79H-4Z"/>
+  <path class="cls-2" d="M-13,91S5.507,234.175,104,231"/>
+  <path class="cls-3" d="M64,218s52.152-59.1,138,31"/>
+  <path class="cls-4" d="M93,227s106.013-17.747,183,5,143,49,143,49"/>
+  <path class="cls-5" d="M409,223s-198.92,3.474-240,47"/>
+  <path class="cls-6" d="M457,217s29.7-37.173,61-30"/>
+  <path class="cls-4" d="M524,206s-54.107-36.309-115,31"/>
+  <path id="Shape_6_copy" data-name="Shape 6 copy" class="cls-4" d="M427,241s-54.107-36.309-115,31"/>
+  <path class="cls-4" d="M-1,163s54.133,2.4,63,63"/>
+  <path class="cls-7" d="M113,231s89.768-7.295,93,43"/>
+</svg>

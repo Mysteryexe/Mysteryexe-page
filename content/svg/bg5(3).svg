@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="258" viewBox="0 0 500 258">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-width: 3.15px;
+        opacity: 0.89;
+      }
+
+      .cls-3 {
+        stroke-width: 1.87px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-width: 4.43px;
+      }
+
+      .cls-5 {
+        opacity: 0.92;
+      }
+
+      .cls-6, .cls-7 {
+        stroke-width: 5.07px;
+      }
+
+      .cls-7 {
+        opacity: 0.73;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M-37,72H83l61-61H266L224,53H324l26-26h64l67,67h19V-22H-39Z"/>
+  <path class="cls-2" d="M468,56s-54.741,191.4-86,23S366-36,366-36"/>
+  <path class="cls-3" d="M439,32s1.249,257.265-13,69S404-46,404-46"/>
+  <path class="cls-4" d="M453,50s8.859,147.086,71,173-1-93-1-93"/>
+  <path class="cls-5" d="M284,47S97.483,134.7,6,61"/>
+  <path class="cls-3" d="M102,27s26.055,236.135,48,74S167-43,167-43"/>
+  <path class="cls-3" d="M246,44s-50.191,1.3-61-49"/>
+  <path class="cls-6" d="M242-1S192.447,44.344,101,34"/>
+  <path class="cls-7" d="M321,38s97.816,107.015,191,87"/>
+</svg>
