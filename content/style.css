@@ -264,7 +264,7 @@ rotate {
   user-select: none;
 }
 inproject {
-  transform: translatey(120%);
+  transform: translatey(120%) skewY(22.5deg);
   top: auto;
   bottom: auto;
   margin: 15px;
