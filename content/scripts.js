@@ -2,19 +2,36 @@ num = 0;
 var i = 1;
 var lastPrj;
 var curImage = 1;
-document.addEventListener("mousemove", parallax);
-function parallax(event) {
-  this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
-    const position = shift.getAttribute("value");
-    var elems2 = document.getElementsByClassName("bgcontainer");
-    const x = (window.innerWidth - event.pageX * position) / 90;
-    const y = (window.innerHeight - event.pageY * position) / 90;
-    if (elems2[0].offsetHeight * 1.5 > event.pageY) {
-      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    } else {
-      shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
-    }
+function detectMob() {
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i,
+  ];
+
+  return toMatch.some((toMatchItem) => {
+    return navigator.userAgent.match(toMatchItem);
   });
+}
+if (!detectMob()) {
+  document.addEventListener("mousemove", parallax);
+  function parallax(event) {
+    this.querySelectorAll(".bgTexture, .mouse").forEach((shift) => {
+      const position = shift.getAttribute("value");
+      var elems2 = document.getElementsByClassName("bgcontainer");
+      const x = (window.innerWidth - event.pageX * position) / 90;
+      const y = (window.innerHeight - event.pageY * position) / 90;
+      if (elems2[0].offsetHeight * 1.5 > event.pageY) {
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      } else {
+        shift.style.transform = `translateX(${0}px) translateY(${0}px)`;
+      }
+    });
+  }
 }
 function betterPerf() {
   setTimeout(function () {
@@ -95,7 +112,7 @@ function PrjAction(x) {
   const projects = document.getElementsByClassName("projectdiv");
   const decoration = document.querySelectorAll("#svgprjholder");
   if ($(window).width() < 900) {
-    var small = "30%";
+    var small = "25%";
     var big = "90%";
     Order = "True";
   } else {
