@@ -82,8 +82,8 @@ function ChangeImage(image, status) {
     curImage = 0;
   }
   const text = document.getElementsByTagName("p3")[index];
-  projectImg[index].src = String(links[index][curImage]);
   if (status == "next" && curImage < curlinks.length - 1) {
+    projectImg[index].src = String(links[index][curImage]);
     curImage += 1;
     projectImg[index].src = String(links[index][curImage]);
   } else if (status == "back" && curImage > 0) {
