@@ -75,6 +75,10 @@ function ChangeImage(image, status) {
       index = i;
     }
   }
+  if (lastPrj != index) {
+    curImage = 0;
+    projectImg[index].src = String(links[index][curImage]);
+  }
   const curlinks = links[index];
   if (curImage > curlinks.length) {
     curImage = 0;
