@@ -2,8 +2,6 @@ num = 0;
 var i = 1;
 var lastPrj;
 var curImage = 1;
-const observer = lozad();
-observer.observe();
 function detectMob() {
   const toMatch = [
     /Android/i,
@@ -83,11 +81,13 @@ function ChangeImage(image, status) {
   }
   const text = document.getElementsByTagName("p3")[index];
   if (status == "next" && curImage < curlinks.length - 1) {
+    projectImg[index].src = "content/svg/loading.svg";
     projectImg[index].src = String(links[index][curImage]);
     curImage += 1;
     projectImg[index].src = String(links[index][curImage]);
   } else if (status == "back" && curImage > 0) {
     curImage -= 1;
+    projectImg[index].src = "content/svg/loading.svg";
     projectImg[index].src = String(links[index][curImage]);
   }
   if (links[index][curImage] == "content/images/endmsg.webp") {
