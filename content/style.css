@@ -311,6 +311,7 @@ inproject {
   height: auto;
   max-height: 100%;
   position: absolute;
+  background-color: #ffffff;
 }
 #prjicon {
   position: absolute;
