@@ -82,13 +82,19 @@ function ChangeImage(image, status) {
   const text = document.getElementsByTagName("p3")[index];
   if (status == "next" && curImage < curlinks.length - 1) {
     projectImg[index].src = "content/svg/loading.svg";
-    projectImg[index].src = String(links[index][curImage]);
+    setTimeout(function () {
+      projectImg[index].src = String(links[index][curImage]);
+    }, 250);
     curImage += 1;
-    projectImg[index].src = String(links[index][curImage]);
+    setTimeout(function () {
+      projectImg[index].src = String(links[index][curImage]);
+    }, 250);
   } else if (status == "back" && curImage > 0) {
     curImage -= 1;
     projectImg[index].src = "content/svg/loading.svg";
-    projectImg[index].src = String(links[index][curImage]);
+    setTimeout(function () {
+      projectImg[index].src = String(links[index][curImage]);
+    }, 250);
   }
   if (links[index][curImage] == "content/images/endmsg.webp") {
     text.style.opacity = 0;
