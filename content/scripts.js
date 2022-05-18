@@ -102,6 +102,12 @@ function ChangeImage(image, status) {
       projectImg[index].src = String(links[index][curImage]);
     }, 150);
   }
+  if (index == 0 && curImage >= 1) {
+    text.innerHTML =
+      "Renders for 'Sarvgard' with V-Ray<br><a target='_blank' href=https://www.instagram.com/sanaat_e_sakhtan.office>Click here for more info!</a>";
+  } else {
+    text.innerHTML = "Vintage Room rendered with V-Ray";
+  }
   if (links[index][curImage] == "content/svg/endmsg.svg") {
     text.style.opacity = 0;
   } else {
