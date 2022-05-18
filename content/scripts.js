@@ -56,7 +56,7 @@ function ChangeImage(image, status) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const render = [
     "content/images/RenderFinalWithMarker.webp",
-    "content/images/endmsg.webp",
+    "content/svg/endmsg.svg",
   ];
   const gingernium = [
     "content/images/Gingernium01.webp",
@@ -65,7 +65,7 @@ function ChangeImage(image, status) {
     "content/images/Gingernium04.webp",
     "content/images/Gingernium05.webp",
     "content/images/Gingernium06.webp",
-    "content/images/endmsg.webp",
+    "content/svg/endmsg.svg",
   ];
   const soon1 = ["content/svg/soon.svg"];
   const soon2 = ["content/svg/soon.svg"];
@@ -100,7 +100,7 @@ function ChangeImage(image, status) {
       projectImg[index].src = String(links[index][curImage]);
     }, 250);
   }
-  if (links[index][curImage] == "content/images/endmsg.webp") {
+  if (links[index][curImage] == "content/svg/endmsg.svg") {
     text.style.opacity = 0;
   } else {
     text.style.opacity = 1;
