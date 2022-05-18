@@ -6,6 +6,22 @@
     background-position: 100% 200%;
   }
 }
+@keyframes OnLoadEffect1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes OnLoadEffect2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 .bgTexture {
   width: 150vw;
   height: 150vh;
@@ -389,6 +405,7 @@ inproject {
   height: 100%;
   aspect-ratio: unset;
   pointer-events: none;
+  animation: 1.2s cubic-bezier(1, -0.01, 0.67, 1) 0s 1 OnLoadEffect2;
 }
 #svg2holder {
   position: absolute;
@@ -404,6 +421,7 @@ inproject {
   height: 100%;
   aspect-ratio: unset;
   pointer-events: none;
+  animation: 1.2s cubic-bezier(0.92, 0.19, 0.67, 1) 0s 1 OnLoadEffect1;
 }
 #svg3holder {
   position: absolute;
