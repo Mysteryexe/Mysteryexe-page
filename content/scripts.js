@@ -105,13 +105,42 @@ function ChangeImage(image, status) {
   if (index == 0 && curImage >= 1) {
     text.innerHTML =
       "Renders for 'Sarvgard' with V-Ray<br><a target='_blank' href=https://www.instagram.com/sanaat_e_sakhtan.office>Click here for more info!</a>";
-  } else {
+  } else if (index == 0) {
     text.innerHTML = "Vintage Room rendered with V-Ray";
   }
   if (links[index][curImage] == "content/svg/endmsg.svg") {
     text.style.opacity = 0;
   } else {
     text.style.opacity = 1;
+  }
+  const previous = document.querySelectorAll("#previous");
+  console.log(previous);
+  const next = document.querySelectorAll("#next");
+  if (curImage == 0) {
+    for (var i = 0; i < previous.length; i += 1) {
+      if (i == index) {
+        previous[i].style.visibility = "hidden";
+        next[i].style.visibility = "visible";
+      } else {
+        previous[i].style.visibility = "visible";
+        next[i].style.visibility = "visible";
+      }
+    }
+  } else if (curImage == links[index].length - 1) {
+    for (var i = 0; i < next.length; i += 1) {
+      if (i == index) {
+        next[i].style.visibility = "hidden";
+        previous[i].style.visibility = "visible";
+      } else {
+        next[i].style.visibility = "visible";
+        previous[i].style.visibility = "visible";
+      }
+    }
+  } else {
+    for (var i = 0; i < next.length; i += 1) {
+      next[i].style.visibility = "visible";
+      previous[i].style.visibility = "visible";
+    }
   }
   lastPrj = index;
 }
