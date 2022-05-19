@@ -268,6 +268,7 @@ rotate {
   backdrop-filter: blur(5px);
   border-radius: 1vw;
   user-select: none;
+  cursor: pointer;
 }
 #previous {
   width: 3.5vw;
@@ -280,6 +281,7 @@ rotate {
   border-radius: 1vw;
   transform: rotate(180deg);
   user-select: none;
+  cursor: pointer;
 }
 inproject {
   transform: translatey(70vh) skewY(22.5deg);
@@ -325,11 +327,14 @@ inproject {
   box-shadow: 1.5vw 1.5vh 15px #000000;
 }
 .projectimg {
-  width: 100%;
-  height: auto;
   max-height: 100%;
+  height: auto;
+  width: auto;
   position: absolute;
   background-color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #prjicon {
   position: absolute;
