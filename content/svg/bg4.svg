@@ -10,7 +10,7 @@
 	.st4{opacity:0.75;fill:none;stroke:#000000;stroke-width:10.14;enable-background:new    ;}
 	.st5{opacity:0.55;fill:none;stroke:#000000;stroke-width:4.68;enable-background:new    ;}
 	.st6{opacity:0.92;fill:none;stroke:#000000;stroke-width:4.68;enable-background:new    ;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#088A3A;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#088A3A;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M1000,0H0v79l121.3-47.5H212l158.6-18.3h312.9L1000,0z"/>
 <path class="st1" d="M48,35c0,0,78,316.8,147-9"/>
