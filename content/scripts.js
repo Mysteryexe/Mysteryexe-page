@@ -114,7 +114,6 @@ function ChangeImage(image, status) {
     text.style.opacity = 1;
   }
   const previous = document.querySelectorAll("#previous");
-  console.log(previous);
   const next = document.querySelectorAll("#next");
   if (curImage == 0) {
     for (var i = 0; i < previous.length; i += 1) {
@@ -144,6 +143,7 @@ function ChangeImage(image, status) {
   }
   lastPrj = index;
 }
+function nextPerv(status1, status2, i) {}
 function openEffect(img) {
   const images = ["render", "gingernium", "soon1", "soon2"];
   const icon = document.getElementsByClassName(img);
