@@ -269,6 +269,7 @@ rotate {
   border-radius: 1vw;
   user-select: none;
   cursor: pointer;
+  transition: opacity 0.5s ease;
 }
 #previous {
   width: 3.5vw;
@@ -282,6 +283,7 @@ rotate {
   transform: rotate(180deg);
   user-select: none;
   cursor: pointer;
+  transition: opacity 0.5s ease;
 }
 inproject {
   transform: translatey(70vh) skewY(22.5deg);
