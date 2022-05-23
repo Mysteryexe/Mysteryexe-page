@@ -25,4 +25,4 @@ RewriteCond %{HTTP_REFERER} !^$
 
 RewriteCond %{HTTP_REFERER} !^http(s)?://mysteryexe.cf/ [NC]
 
-RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+RewriteRule \.(gif|jpg|jpeg|bmp|zip|rar|mp3|flv|swf|xml|php|png|css|pdf)$ - [F]
