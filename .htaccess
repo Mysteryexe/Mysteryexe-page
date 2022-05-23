@@ -19,3 +19,5 @@ ForceType application/x-httpd-php
 ForceType application/x-httpd-php
 
 Options All -Indexes
+
+AddType image/svg+xml .svg .svgz
