@@ -97,8 +97,7 @@ h1 span {
 }
 h1 span:hover {
   color: #000000;
-  background: url(https://cycling74-web-uploads.s3.amazonaws.com/5600596f5cc0a22f43bf9091/2021-03-16T23:50:16Z/line-noise-loop.gif)
-    10% 0 / cover no-repeat;
+  background: url(/content/gif/line-noise.gif) 10% 0 / cover no-repeat;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
