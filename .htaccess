@@ -17,3 +17,5 @@ Header unset Cache-Control
 
 ForceType application/x-httpd-php
 ForceType application/x-httpd-php
+
+Options All -Indexes
