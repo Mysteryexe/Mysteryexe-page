@@ -20,3 +20,6 @@ RewriteRule \.(gif|jpg|jpeg|bmp|zip|rar|mp3|flv|swf|xml|php|png|css|pdf)$ - [F]
 <FilesMatch ".(css|pl|php|cgi|spl|scgi|fcgi|js)$">
 Header unset Cache-Control
 </FilesMatch>
+
+ForceType application/x-httpd-php
+ForceType application/x-httpd-php
