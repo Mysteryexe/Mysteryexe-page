@@ -2,6 +2,22 @@ num = 0;
 var i = 1;
 var lastPrj;
 var curImage = 1;
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+const projects = document.getElementsByClassName("projectdiv");
+function RandomBG() {
+  setTimeout(function () {
+    for (var i = 0; i < projects.length; i += 1) {
+      projects[i].style.backgroundPosition =
+        String(getRandomInt(500)) +
+        "px" +
+        " " +
+        (String(getRandomInt(500)) + "px");
+    }
+  }, 5);
+}
+RandomBG();
 function detectMob() {
   const toMatch = [
     /Android/i,
@@ -158,7 +174,6 @@ function openEffect(img) {
 }
 function PrjAction(x) {
   const images = ["render", "gingernium", "soon1", "soon2"];
-  const projects = document.getElementsByClassName("projectdiv");
   const decoration = document.querySelectorAll("#svgprjholder");
   if ($(window).width() < 900) {
     var small = "25%";
