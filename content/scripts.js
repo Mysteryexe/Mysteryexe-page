@@ -1,11 +1,41 @@
+//! by Mystery.exe#5099
+
 num = 0;
 var i = 1;
 var lastPrj;
 var curImage = 1;
+//! const and var for performance optimizations.
+const projects = document.getElementsByClassName("projectdiv");
+const projectImg = document.getElementsByClassName("projectimg");
+
+var bgTexture = document.getElementsByClassName("bgTexture");
+var bgcontainer = document.getElementsByClassName("bgcontainer");
+
+//! project images id(s)
+const images = ["render", "gingernium", "soon1", "soon2"];
+const render = [
+  "content/images/RenderFinalWithMarker.webp",
+  "content/images/RenderNo2.webp",
+  "content/images/RenderNo3.webp",
+  "content/svg/endmsg.svg",
+];
+const gingernium = [
+  "content/images/Gingernium01.webp",
+  "content/images/Gingernium02.webp",
+  "content/images/Gingernium03.webp",
+  "content/images/Gingernium04.webp",
+  "content/images/Gingernium05.webp",
+  "content/images/Gingernium06.webp",
+  "content/svg/endmsg.svg",
+];
+const soon1 = ["content/svg/soon.svg"];
+const soon2 = ["content/svg/soon.svg"];
+const links = [render, gingernium, soon1, soon2];
+
+//! functions
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-const projects = document.getElementsByClassName("projectdiv");
 function RandomBG() {
   setTimeout(function () {
     for (var i = 0; i < projects.length; i += 1) {
@@ -51,13 +81,11 @@ if (!detectMob()) {
 }
 function betterPerf() {
   setTimeout(function () {
-    var y = document.getElementsByClassName("bgTexture");
-    var elems1 = document.getElementsByClassName("bgcontainer");
-    var offset = elems1[0].offsetHeight;
+    var offset = bgcontainer[0].offsetHeight;
     if (window.scrollY > offset) {
-      y[0].style.webkitAnimationPlayState = "paused";
+      bgTexture[0].style.webkitAnimationPlayState = "paused";
     } else {
-      y[0].style.webkitAnimationPlayState = "running";
+      bgTexture[0].style.webkitAnimationPlayState = "running";
     }
     i++;
     if (i < 10) {
@@ -67,27 +95,9 @@ function betterPerf() {
 }
 betterPerf();
 function ChangeImage(image, status) {
-  const projectImg = document.getElementsByClassName("projectimg");
+  const previous = document.querySelectorAll("#previous");
+  const next = document.querySelectorAll("#next");
   var index = 0;
-  const images = ["render", "gingernium", "soon1", "soon2"];
-  const render = [
-    "content/images/RenderFinalWithMarker.webp",
-    "content/images/RenderNo2.webp",
-    "content/images/RenderNo3.webp",
-    "content/svg/endmsg.svg",
-  ];
-  const gingernium = [
-    "content/images/Gingernium01.webp",
-    "content/images/Gingernium02.webp",
-    "content/images/Gingernium03.webp",
-    "content/images/Gingernium04.webp",
-    "content/images/Gingernium05.webp",
-    "content/images/Gingernium06.webp",
-    "content/svg/endmsg.svg",
-  ];
-  const soon1 = ["content/svg/soon.svg"];
-  const soon2 = ["content/svg/soon.svg"];
-  const links = [render, gingernium, soon1, soon2];
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == image) {
       index = i;
@@ -129,8 +139,6 @@ function ChangeImage(image, status) {
   } else {
     text.style.opacity = 1;
   }
-  const previous = document.querySelectorAll("#previous");
-  const next = document.querySelectorAll("#next");
   if (curImage == 0) {
     for (var i = 0; i < previous.length; i += 1) {
       if (i == index) {
@@ -159,9 +167,7 @@ function ChangeImage(image, status) {
   }
   lastPrj = index;
 }
-function nextPerv(status1, status2, i) {}
 function openEffect(img) {
-  const images = ["render", "gingernium", "soon1", "soon2"];
   const icon = document.getElementsByClassName(img);
   icon[0].style.transform = "translatey(-70vh) skewY(22.5deg)";
   for (var i = 0; i < images.length; i += 1) {
@@ -173,8 +179,6 @@ function openEffect(img) {
   }
 }
 function PrjAction(x) {
-  const images = ["render", "gingernium", "soon1", "soon2"];
-  const decoration = document.querySelectorAll("#svgprjholder");
   if ($(window).width() < 900) {
     var small = "25%";
     var big = "90%";
@@ -185,6 +189,7 @@ function PrjAction(x) {
     Order = "false";
   }
   openEffect(x);
+  const decoration = document.querySelectorAll("#svgprjholder");
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == x) {
       if (projects[i].style.width != big) {
