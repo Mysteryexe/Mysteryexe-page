@@ -37,6 +37,14 @@
     </style>
   </head>
   <body onload="loadAnim()">
+    <script>
+      function loadAnim() {
+        const svg1 = document.getElementById("svg1holder");
+        svg1.style.transform = "translateX(0%)";
+        const svg2 = document.getElementById("svg2holder");
+        svg2.style.transform = "translateX(0%)";
+      }
+    </script>
     <rotate
       ><svg
         xmlns="http://www.w3.org/2000/svg"
