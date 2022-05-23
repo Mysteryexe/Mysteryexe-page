@@ -20,3 +20,9 @@ mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </IfModule>
 
 ErrorDocument 404 /404.html
+
+RewriteCond %{HTTP_REFERER} !^$
+
+RewriteCond %{HTTP_REFERER} !^http(s)?://mysteryexe.cf/ [NC]
+
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
