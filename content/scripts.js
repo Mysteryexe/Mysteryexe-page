@@ -48,12 +48,6 @@ function RandomBG() {
   }, 5);
 }
 RandomBG();
-function loadAnim() {
-  const svg1 = document.getElementById("svg1holder");
-  svg1.style.transform = "translateX(0%)";
-  const svg2 = document.getElementById("svg2holder");
-  svg2.style.transform = "translateX(0%)";
-}
 function detectMob() {
   const toMatch = [
     /Android/i,
