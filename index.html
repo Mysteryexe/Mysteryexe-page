@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3P491R2RL"></script>
     <script>
@@ -36,13 +36,27 @@
       @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hubballi&display=swap");
     </style>
   </head>
-  <body onload="loadAnim()">
+  <body onload="loadAnim(), RandomBG()">
     <script>
       function loadAnim() {
         const svg1 = document.getElementById("svg1holder");
         svg1.style.transform = "translateX(0%)";
         const svg2 = document.getElementById("svg2holder");
         svg2.style.transform = "translateX(0%)";
+      }
+      function RandomBG() {
+        setTimeout(function () {
+          for (var i = 0; i < projects.length; i += 1) {
+            projects[i].style.backgroundPosition =
+              String(getRandomInt(500)) +
+              "px" +
+              " " +
+              (String(getRandomInt(500)) + "px");
+          }
+        }, 5);
+      }
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
       }
     </script>
     <rotate
