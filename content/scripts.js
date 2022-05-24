@@ -33,6 +33,9 @@ const soon2 = ["content/svg/soon.svg"];
 const links = [render, gingernium, soon1, soon2];
 
 //! functions
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 function detectMob() {
   const toMatch = [
     /Android/i,
