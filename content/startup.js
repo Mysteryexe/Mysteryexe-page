@@ -23,6 +23,5 @@ function RandomBG() {
 }
 function parrotsvg() {
   const parrot = document.querySelectorAll(".parrot");
-  console.log(parrot);
   parrot[0].src = "content/svg/bg4(" + String(getRandomInt(4)) + ").svg";
 }
