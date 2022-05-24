@@ -33,21 +33,6 @@ const soon2 = ["content/svg/soon.svg"];
 const links = [render, gingernium, soon1, soon2];
 
 //! functions
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-function RandomBG() {
-  setTimeout(function () {
-    for (var i = 0; i < projects.length; i += 1) {
-      projects[i].style.backgroundPosition =
-        String(getRandomInt(500)) +
-        "px" +
-        " " +
-        (String(getRandomInt(500)) + "px");
-    }
-  }, 5);
-}
-RandomBG();
 function detectMob() {
   const toMatch = [
     /Android/i,
