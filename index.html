@@ -23,11 +23,12 @@
     <link rel="stylesheet" href="content/style.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="content/scrollbar.css" type="text/css" media="all"/>
     <script src="content/scripts.js"></script>
-    <script src="content/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel = "icon" href ="https://media.discordapp.net/attachments/851753816881102869/933990768132112434/Icon.png" type = "image/x-icon">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="apple-touch-icon" href="https://media.discordapp.net/attachments/851753816881102869/933990768132112434/Icon.png">
     <meta name="keywords" content="development, freelancer, photoshop, css , html, roblox, gingernium, adventure, programming, Dani_XYT, design, iran, lua, studio, mystery, mystery studio, render, V-Ray, sketchup, 3D, amongus, sus, amogus, adobe, Applications">
     <title>Mystery Studio</title>
@@ -36,8 +37,11 @@
       @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hubballi&display=swap");
     </style>
   </head>
-  <body onload="loadAnim(), RandomBG()">
+  <body onload="loadAnim(), RandomBG(), parrotsvg()">
     <script>
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
       function loadAnim() {
         const svg1 = document.getElementById("svg1holder");
         svg1.style.transform = "translateX(0%)";
@@ -55,8 +59,10 @@
           }
         }, 5);
       }
-      function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
+      function parrotsvg() {
+        const parrot = document.querySelectorAll(".parrot");
+        console.log(parrot)
+        parrot[0].src = "content/svg/bg4(" + String(getRandomInt(4)) + ").svg";
       }
     </script>
     <rotate
@@ -187,7 +193,7 @@
       <!-- 4b) Scroll -->
       <div id="projects">
         <shape id="svg3holder" style="height:10vh;z-index:2">
-          <img id="svg3" src="content/svg/bg4.svg" style="top: 0" />
+          <img class="parrot" id="svg3" src="content/svg/bg4(0).svg" style="top: 0" />
         </shape>
         <div id="desc">
           <p4><font size="10vw">Hi! I'm <b>Amirali</b>.</font><br>
