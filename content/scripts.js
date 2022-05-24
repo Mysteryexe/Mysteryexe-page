@@ -33,14 +33,6 @@ const soon2 = ["content/svg/soon.svg"];
 const links = [render, gingernium, soon1, soon2];
 
 //! functions
-//! reset scroll on refresh
-if (history.scrollRestoration) {
-  history.scrollRestoration = "manual";
-} else {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-}
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
