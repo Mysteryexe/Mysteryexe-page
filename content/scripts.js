@@ -157,7 +157,7 @@ function ChangeImage(image, status) {
 }
 function openEffect(img) {
   const icon = document.getElementsByClassName(img);
-  icon[0].style.transform = "translatey(-70vh) skewY(22.5deg)";
+  icon[0].style.transform = "translatey(-200%) skewY(22.5deg)";
   for (var i = 0; i < images.length; i += 1) {
     if (images[i] == img) {
     } else {
@@ -203,7 +203,7 @@ function PrjAction(x) {
       decoration[i].querySelectorAll("#svg4Top")[0].style.transform =
         "translatey(0%)";
       var imageContainer = projects[i].querySelectorAll("inproject");
-      imageContainer[0].style.transform = "translatey(70vh) skewY(22.5deg)";
+      imageContainer[0].style.transform = "translatey(200%) skewY(22.5deg)";
     }
   }
 }
