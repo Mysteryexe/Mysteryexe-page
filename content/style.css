@@ -48,6 +48,7 @@ body {
   margin: 0;
   overflow: overlay;
   z-index: -10000;
+  -webkit-font-smoothing: antialiased;
 }
 img {
   user-select: none;
@@ -481,6 +482,25 @@ inproject {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+#mysteryIcon {
+  width: auto;
+  height: 65vh;
+}
+.iconContainer {
+  width: calc(100vw - 50px);
+  height: 120vh;
+  left: 50px;
+  position: absolute;
+  user-select: none;
+  display: flex;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 #flowerHolder {
   position: absolute;
