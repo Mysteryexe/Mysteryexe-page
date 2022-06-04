@@ -65,10 +65,19 @@ a {
   width: 100vw;
   float: top;
   background-color: aliceblue;
+}
+.centerin {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+#screen2 {
+  position: relative;
+  height: max-content;
+  width: 100vw;
+  float: top;
+  background-color: aliceblue;
 }
 .square {
   aspect-ratio: 1;
@@ -91,8 +100,12 @@ a {
   text-decoration: none;
 }
 .button {
+  text-align: center;
   margin-top: 2vh;
-  padding: 1%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
   position: relative;
   background-color: blanchedalmond;
   color: black;
@@ -100,10 +113,13 @@ a {
   font-weight: 700;
   letter-spacing: 3px;
   border-radius: 2vh;
-  transition: letter-spacing 0.35s ease-in-out;
+  transition: letter-spacing 0.35s ease-in-out, border-radius 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 .button:hover {
   letter-spacing: 8px;
+  border-radius: 4vh;
+  background-color: rgb(255, 225, 179);
 }
 @media (max-aspect-ratio: 9/7) {
 }
