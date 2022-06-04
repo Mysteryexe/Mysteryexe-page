@@ -10,26 +10,38 @@
       type="text/css"
       media="all"
     />
+    <link
+      rel="stylesheet"
+      href="content/scrollbar.css"
+      type="text/css"
+      media="all"
+    />
     <title>Azadeh K. Ghasr</title>
-    <script src="content/script.js"></script>
+    <script type="text/javascript" src="content/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap");
     </style>
   </head>
-  <bar>
-    <h1 class="title">Azadeh K. Ghasr</h1>
-    <nav>
-      <a href="/home">Home</a>
-      <a href="/articles">Articles</a>
-      <a href="/profession">Profession</a>
-      <a href="/research">Research</a>
-      <a href="/awards">Awards</a>
-      <a href="/cv">CV</a>
-      <a href="/dissertations">Dissertations</a>
-    </nav>
-  </bar>
-  <body>
+  <body onload="load()">
+    <bar id="navbar">
+      <h1 class="title">Azadeh K. Ghasr</h1>
+      <div id="pencet">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav value="1">
+        <a href="/home">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/profession">Profession</a>
+        <a href="/research">Research</a>
+        <a href="/awards">Awards</a>
+        <a href="/cv">CV</a>
+        <a href="/dissertations">Dissertations</a>
+      </nav>
+    </bar>
     <div id="screen1" class="centerin">
       <div>
         <bar style="position: relative"></bar>
