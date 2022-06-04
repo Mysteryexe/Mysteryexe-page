@@ -44,6 +44,8 @@ nav {
 }
 nav a {
   margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-right: min(10px);
   padding-left: min(10px);
   text-decoration: none;
@@ -63,11 +65,15 @@ nav a {
 a {
   text-decoration: none;
   color: #2f8f9d;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+nav a:hover {
+  transform: translateY(1vh);
+  padding-top: -1vh;
 }
 .underline {
   position: relative;
 }
-
 .underline::before {
   z-index: 0;
   content: "";
@@ -80,13 +86,29 @@ a {
   background-color: #2f8e9dae;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before {
     left: 0;
     right: auto;
     width: 100%;
   }
+}
+h1.name::before {
+  content: "";
+  margin-top: 1%;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  border-top: 1px solid rgb(0, 0, 0, 0.3);
+  display: block;
+}
+h1.name::after {
+  content: "";
+  margin-top: 1%;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 1%;
+  border-top: 1px solid rgb(0, 0, 0, 0.3);
+  display: block;
 }
 #screen1 {
   position: relative;
@@ -118,10 +140,11 @@ a {
 }
 .name {
   position: relative;
-  height: auto;
-  width: 100vw;
+  height: min-content;
+  width: 90vw;
   text-align: center;
   margin: 0;
+  margin-left: 5vw;
 }
 h1.name {
   font-size: 6vw;
@@ -176,19 +199,9 @@ h1.name {
 .Diam span:nth-child(3) {
   transform: rotate(-45deg) translate(1px, 0);
 }
-@media (max-aspect-ratio: 11/7) {
-  /*
-  nav {
-    display: none;
-  }
-  */
+@media (max-aspect-ratio: 12/7) {
   .title {
-    position: absolute;
-    font-size: 4vh;
-    margin: 0px;
-    height: fit-content;
     left: 3vh;
-    font-family: "Jost", sans-serif;
   }
   #pencet {
     display: flex;
@@ -205,5 +218,23 @@ h1.name {
     right: unset;
     flex-direction: column;
     transition: top 0.5s ease-in-out;
+  }
+}
+@media (max-aspect-ratio: 9/3) {
+  .title {
+    left: 3vh;
+    font-size: 5vh;
+  }
+  nav {
+    right: 3vh;
+  }
+  nav a {
+    font-size: 3vh;
+  }
+}
+@media (max-aspect-ratio: 1/1) {
+  h1.name {
+    font-size: 9vw;
+    opacity: 0.8;
   }
 }
