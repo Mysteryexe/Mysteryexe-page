@@ -58,13 +58,38 @@ nav a {
 }
 a {
   text-decoration: none;
+  color: #2f8f9d;
+}
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: #3bacb6;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 #screen1 {
   position: relative;
   height: 100vh;
   width: 100vw;
   float: top;
-  background-color: aliceblue;
+  background-color: #c2ded1;
 }
 .centerin {
   display: flex;
@@ -96,9 +121,6 @@ a {
 h1.name {
   font-size: 6vw;
 }
-a {
-  text-decoration: none;
-}
 .button {
   text-align: center;
   margin-top: 2vh;
@@ -107,7 +129,7 @@ a {
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   position: relative;
-  background-color: blanchedalmond;
+  background-color: #ece5c7;
   color: black;
   font-family: "Cabin", sans-serif;
   font-weight: 700;
@@ -119,7 +141,7 @@ a {
 .button:hover {
   letter-spacing: 8px;
   border-radius: 4vh;
-  background-color: rgb(255, 225, 179);
+  background-color: #e8deae;
 }
 @media (max-aspect-ratio: 9/7) {
 }
