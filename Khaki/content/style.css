@@ -124,6 +124,7 @@ a {
 }
 h1.name {
   font-size: 6vw;
+  opacity: 0.8;
 }
 .button {
   text-align: center;
@@ -175,9 +176,11 @@ h1.name {
   transform: rotate(-45deg) translate(1px, 0);
 }
 @media (max-aspect-ratio: 11/7) {
+  /*
   nav {
     display: none;
   }
+  */
   .title {
     position: absolute;
     font-size: 4vh;
@@ -188,5 +191,18 @@ h1.name {
   }
   #pencet {
     display: flex;
+  }
+  nav {
+    z-index: -1;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    width: 100vw;
+    height: 50vh;
+    background-color: #dfeee7;
+    left: 0vh;
+    top: -65vh;
+    right: unset;
+    flex-direction: column;
+    transition: top 0.5s ease-in-out;
   }
 }

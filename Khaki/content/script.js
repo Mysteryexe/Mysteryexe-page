@@ -15,7 +15,16 @@ function load() {
   navbarTran();
   //toggle mobile menu
   const clickx = document.getElementById("pencet");
+  const navbar = document.getElementsByTagName("nav")[0];
+  console.log(navbar);
   clickx.addEventListener("click", function () {
     clickx.classList.toggle("Diam");
+    if (navbar.value == "1") {
+      navbar.style.top = "-65vh";
+      navbar.value = "0";
+    } else {
+      navbar.style.top = "0vh";
+      navbar.value = "1";
+    }
   });
 }
