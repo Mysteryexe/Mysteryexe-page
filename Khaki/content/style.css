@@ -22,10 +22,13 @@ bar {
   position: fixed;
   top: 0;
   height: 10vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #c2ded100;
   width: 100vw;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.1s ease-in-out,
+    background-color 0.5s ease-in-out;
 }
 nav {
   position: absolute;
@@ -73,7 +76,7 @@ a {
   width: 0;
   bottom: -1px;
   height: 2px;
-  background-color: #3bacb6;
+  background-color: #2f8e9dae;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -100,6 +103,7 @@ a {
 #screen2 {
   position: relative;
   height: max-content;
+  height: 100vh;
   width: 100vw;
   float: top;
   background-color: aliceblue;
@@ -143,5 +147,46 @@ h1.name {
   border-radius: 4vh;
   background-color: #e8deae;
 }
-@media (max-aspect-ratio: 9/7) {
+/* mobile menu */
+#pencet {
+  display: none;
+  align-items: center;
+  right: 3vh;
+  position: absolute;
+  flex-direction: column;
+  cursor: pointer;
+}
+#pencet span {
+  background-color: rgb(0, 0, 0);
+  width: 2em;
+  height: 0.2em;
+  margin: 0.26em 0;
+  display: block;
+  transition: all 0.4s ease;
+  transform-origin: 0 0;
+}
+.Diam span:nth-child(1) {
+  transform: rotate(45deg) translate(1px, -1px);
+}
+.Diam span:nth-child(2) {
+  transform: scaleX(0);
+}
+.Diam span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 0);
+}
+@media (max-aspect-ratio: 11/7) {
+  nav {
+    display: none;
+  }
+  .title {
+    position: absolute;
+    font-size: 4vh;
+    margin: 0px;
+    height: fit-content;
+    left: 3vh;
+    font-family: "Jost", sans-serif;
+  }
+  #pencet {
+    display: flex;
+  }
 }
