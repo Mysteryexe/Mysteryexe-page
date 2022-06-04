@@ -17,12 +17,22 @@ h1 {
 p {
   font-family: Arial;
 }
+bar {
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
 nav {
   position: absolute;
-  height: auto;
-  width: calc(100vw - 85vh);
-  left: 15vh;
-  bottom: 5vh;
+  height: 100%;
+  width: max-content;
+  right: 20vh;
+  top: 0vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,38 +43,32 @@ nav a {
   padding-right: min(10px);
   padding-left: min(10px);
   text-decoration: none;
-  font-family: Arial;
+  font-family: "Cabin", sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
   color: rgb(0, 0, 0);
+}
+.title {
+  position: absolute;
+  font-size: 2.1vw;
+  margin: 0px;
+  height: fit-content;
+  left: 20vh;
+  font-family: "Jost", sans-serif;
 }
 a {
   text-decoration: none;
 }
 #screen1 {
   position: relative;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
   float: top;
   background-color: aliceblue;
-}
-#screen2 {
-  width: calc(100vw - 30vh);
-  float: top;
-  height: fit-content;
-  margin-left: 15vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  align-content: flex-end;
-  flex-wrap: wrap;
-}
-#pfp {
-  position: absolute;
-  background-color: wheat;
-  height: 40vh;
-  top: 5vh;
-  right: 15vh;
+  flex-direction: column;
+  justify-content: center;
 }
 .square {
   aspect-ratio: 1;
@@ -76,93 +80,30 @@ a {
 .name {
   position: relative;
   height: auto;
-  width: calc(100vw - 85vh);
-  left: 15vh;
-  top: 5vh;
+  width: 100vw;
+  text-align: center;
   margin: 0;
 }
-.container {
-  background-color: rgb(171, 151, 114);
-  width: 22.5vw;
-  padding-right: min(10px);
-  padding-left: min(10px);
-  padding-bottom: min(10px);
-  padding-top: min(10px);
-  margin-top: 4vh;
+h1.name {
+  font-size: 6vw;
 }
-.container h1 {
-  font-size: 1.8vw;
-  width: 100%;
-  height: auto;
-  left: 0;
-  text-align: center;
-  top: 0;
+a {
+  text-decoration: none;
+}
+.button {
+  margin-top: 2vh;
+  padding: 1%;
+  position: relative;
+  background-color: blanchedalmond;
+  color: black;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 2vh;
+  transition: letter-spacing 0.35s ease-in-out;
+}
+.button:hover {
+  letter-spacing: 8px;
 }
 @media (max-aspect-ratio: 9/7) {
-  #screen2 {
-    width: 95vw;
-    margin-left: 2.5vw;
-    justify-content: space-around;
-  }
-  .container {
-    width: 80vw;
-  }
-  .container h1 {
-    font-size: 4vw;
-  }
-}
-@media (max-aspect-ratio: 8/7) {
-  nav {
-    display: none;
-    height: 40vh;
-    width: min-content;
-    left: auto;
-    right: 0vh;
-    top: 5vh;
-    align-content: space-around;
-    flex-wrap: wrap;
-  }
-  nav a {
-    width: fit-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #pfp {
-    right: 10vh;
-  }
-  .name {
-    width: calc(100vw - 65vh);
-    left: 10vh;
-  }
-  p {
-    font-size: larger;
-  }
-  #screen1 p {
-    position: absolute;
-    top: unset;
-    bottom: 5vh;
-  }
-  h1 {
-    font-size: 4.3vw;
-  }
-}
-@media (max-aspect-ratio: 1/1) {
-  #pfp {
-    display: none;
-  }
-  .name {
-    width: calc(100vw - 20vh);
-  }
-}
-@media (max-aspect-ratio: 6/7) {
-  h1 {
-    font-size: 6.3vw;
-  }
-  .name {
-    width: calc(100vw - 10vh);
-    left: 5vh;
-  }
-  .container h1 {
-    font-size: 5vw;
-  }
 }
