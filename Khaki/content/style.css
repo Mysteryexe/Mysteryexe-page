@@ -18,18 +18,17 @@ body {
   overflow: overlay;
 }
 h1 {
-  font-size: 3vw;
   font-family: "Demonstration";
 }
 h2 {
   margin-top: 0px;
   margin-bottom: 1vh;
-  font-size: 4vw;
+  font-size: clamp(2.5rem, 4vw, 5rem);
   font-family: "Cabin", sans-serif;
   letter-spacing: 3px;
 }
 h2p {
-  font-size: 3vw;
+  font-size: clamp(1.4rem, 3vw, 4rem);
   margin: 0px;
   height: fit-content;
   font-family: "Jost", sans-serif;
@@ -70,7 +69,7 @@ nav a {
   text-decoration: none;
   font-family: "Cabin", sans-serif;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 1.4vw, 3rem);
   color: rgb(0, 0, 0);
 }
 .bio {
@@ -89,7 +88,7 @@ nav a {
   margin-bottom: auto;
   position: relative;
   width: 65vw;
-  font-size: 2.6vh;
+  font-size: clamp(1.2rem, 1.4vw, 2.5rem);
   text-align: justify;
   text-justify: auto;
 }
@@ -99,7 +98,7 @@ nav a {
 }
 .title {
   position: absolute;
-  font-size: 2.1vw;
+  font-size: clamp(1.6rem, 2.1vw, 3.2rem);
   margin: 0px;
   height: fit-content;
   left: 20vh;
@@ -202,7 +201,7 @@ h1.name::after {
   margin: 0;
 }
 h1.name {
-  font-size: 4.3vw;
+  font-size: clamp(2.2rem, 4.3vw, 5.4rem);
   opacity: 0.8;
 }
 .button {
@@ -278,26 +277,12 @@ h1.name {
 @media (max-aspect-ratio: 9/3) {
   .title {
     left: 3vh;
-    font-size: 5vh;
   }
   nav {
     right: 3vh;
   }
-  nav a {
-    font-size: 3vh;
-  }
 }
 @media (max-aspect-ratio: 1/1) {
-  h1.name {
-    font-size: 9vw;
-    opacity: 0.8;
-  }
-  h2 {
-    font-size: 9vw;
-  }
-  h2p {
-    font-size: 5.5vw;
-  }
   .bio {
     flex-direction: column !important;
     align-items: center !important;
@@ -313,6 +298,5 @@ h1.name {
     position: relative;
     width: 80vw;
     height: 100%;
-    font-size: 2.6vh;
   }
 }

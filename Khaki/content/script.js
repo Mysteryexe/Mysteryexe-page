@@ -14,7 +14,6 @@ function navbarTran() {
 function smoothScroll() {
   navbar = document.getElementById("navbar");
   const navheight = navbar.offsetHeight;
-  console.log(navheight);
   document.documentElement.style.setProperty(
     "--scroll-padding",
     navheight - 1 + "px"
@@ -26,7 +25,6 @@ function load() {
   //toggle mobile menu
   const clickx = document.getElementById("pencet");
   const navbar = document.getElementsByTagName("nav")[0];
-  console.log(navbar);
   clickx.addEventListener("click", function () {
     clickx.classList.toggle("Diam");
     if (navbar.value == "1") {
