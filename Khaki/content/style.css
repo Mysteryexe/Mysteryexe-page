@@ -7,6 +7,10 @@
   font-family: "Demonstration";
   src: url(/fonts/Demonstration.ttf), url(/Khaki/fonts/Demonstration.ttf);
 }
+html {
+  scroll-padding-top: var(--scroll-padding, 70px);
+  scroll-behavior: smooth;
+}
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -16,6 +20,19 @@ body {
 h1 {
   font-size: 3vw;
   font-family: "Demonstration";
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 1vh;
+  font-size: 4vw;
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 3px;
+}
+h2p {
+  font-size: 3vw;
+  margin: 0px;
+  height: fit-content;
+  font-family: "Jost", sans-serif;
 }
 p {
   font-family: Arial;
@@ -55,6 +72,30 @@ nav a {
   font-weight: 500;
   font-size: 1.2rem;
   color: rgb(0, 0, 0);
+}
+.bio {
+  flex-direction: row !important;
+  justify-content: space-evenly !important;
+  align-items: stretch !important;
+}
+.pfp {
+  position: relative;
+  width: 20vw;
+  aspect-ratio: 0.79;
+}
+.pfptxt {
+  height: max-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  width: 65vw;
+  font-size: 2.6vh;
+  text-align: justify;
+  text-justify: auto;
+}
+.pfpContainer {
+  width: max-content;
+  background-color: #c2ded1;
 }
 .title {
   position: absolute;
@@ -139,8 +180,9 @@ h1.name::after {
 }
 #screen2 {
   position: relative;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
   height: max-content;
-  height: 100vh;
   width: 100vw;
   float: top;
   background-color: aliceblue;
@@ -249,5 +291,28 @@ h1.name {
   h1.name {
     font-size: 9vw;
     opacity: 0.8;
+  }
+  h2 {
+    font-size: 9vw;
+  }
+  h2p {
+    font-size: 5.5vw;
+  }
+  .bio {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .pfp {
+    position: relative;
+    background-color: #2f8f9d;
+    height: min-content;
+    width: 80vw;
+    aspect-ratio: 0.79;
+  }
+  .pfptxt {
+    position: relative;
+    width: 80vw;
+    height: 100%;
+    font-size: 2.6vh;
   }
 }
