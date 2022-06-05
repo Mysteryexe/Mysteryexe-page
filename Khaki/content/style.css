@@ -3,6 +3,10 @@
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
+@font-face {
+  font-family: "Demonstration";
+  src: url(/fonts/Demonstration.ttf);
+}
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -11,9 +15,7 @@ body {
 }
 h1 {
   font-size: 3vw;
-  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto,
-    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Demonstration";
 }
 p {
   font-family: Arial;
@@ -67,7 +69,7 @@ nav a {
   height: 50vh;
   width: auto;
   aspect-ratio: 0.76;
-  margin-bottom: -2vw;
+  margin-bottom: -1.6vw;
 }
 .fill {
   width: 100%;
@@ -106,18 +108,19 @@ nav a:hover {
 }
 h1.name::before {
   content: "";
-  margin-top: 1%;
+  margin-top: 1vw;
   margin-left: 8vw;
   margin-right: 8vw;
+  margin-bottom: 1vw;
   border-top: 1px solid rgb(0, 0, 0, 0.3);
   display: block;
 }
 h1.name::after {
   content: "";
-  margin-top: 1%;
+  margin-top: -0.5vw;
   margin-left: 8vw;
   margin-right: 8vw;
-  margin-bottom: 1%;
+  margin-bottom: 1vw;
   border-top: 1px solid rgb(0, 0, 0, 0.3);
   display: block;
 }
