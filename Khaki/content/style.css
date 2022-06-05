@@ -34,7 +34,14 @@ h2p {
   font-family: "Jost", sans-serif;
 }
 p {
-  font-family: Arial;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+footer {
+  position: relative;
+  height: max-content;
+  min-height: 20vh;
+  width: 100vw;
+  background-color: #354259;
 }
 bar {
   z-index: 15;
@@ -91,6 +98,9 @@ nav a {
   font-size: clamp(1.2rem, 1.4vw, 2.5rem);
   text-align: justify;
   text-justify: auto;
+}
+.pfptxt p {
+  font-family: "Lato", sans-serif !important;
 }
 .pfpContainer {
   width: max-content;
@@ -180,11 +190,11 @@ h1.name::after {
 #screen2 {
   position: relative;
   padding-top: 2vh;
-  padding-bottom: 3vh;
+  padding-bottom: 6vh;
   height: max-content;
   width: 100vw;
   float: top;
-  background-color: aliceblue;
+  background-color: #ece5c7;
 }
 .square {
   aspect-ratio: 1;
