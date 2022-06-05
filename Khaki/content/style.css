@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: "Demonstration";
-  src: url(/fonts/Demonstration.ttf);
+  src: url(/fonts/Demonstration.ttf), url(/Khaki/fonts/Demonstration.ttf);
 }
 body {
   -webkit-font-smoothing: antialiased;
