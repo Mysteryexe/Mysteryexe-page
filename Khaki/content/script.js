@@ -1,3 +1,14 @@
+if (!detectMob()) {
+  document.addEventListener("mousemove", parallax);
+  function parallax(event) {
+    this.querySelectorAll(".mouse").forEach((shift) => {
+      const position = shift.getAttribute("value");
+      const x = (window.innerWidth - event.pageX * position) / 90;
+      const y = (window.innerHeight - event.pageY * position) / 90;
+      shift.style.transform = `translateX(${x}px) translateY(${y}px) scale(1.2)`;
+    });
+  }
+}
 function detectMob() {
   const toMatch = [
     /Android/i,
@@ -22,6 +33,7 @@ function navbarTran() {
       } else {
         navbar.style.backgroundColor = "#c2ded10";
         navbar.style.backdropFilter = "blur(0.15vh)";
+        navbar.style.webkit;
       }
       navbar.style.boxShadow =
         "0px 0px 5px 0px rgba(0, 0, 0, 0.1) , 0px 0px 1px 0px rgba(0, 0, 0, 0.1)";

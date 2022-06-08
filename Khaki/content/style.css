@@ -17,8 +17,17 @@ body {
   margin: 0;
   overflow: overlay;
 }
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+}
 h1 {
   font-family: "Demonstration";
+  user-select: none;
 }
 h2 {
   margin-top: 0px;
@@ -26,12 +35,14 @@ h2 {
   font-size: clamp(2.5rem, 4vw, 5rem);
   font-family: "Cabin", sans-serif;
   letter-spacing: 3px;
+  user-select: none;
 }
 h2p {
   font-size: clamp(1.4rem, 3vw, 4rem);
   margin: 0px;
   height: fit-content;
   font-family: "Jost", sans-serif;
+  user-select: none;
 }
 p {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -53,8 +64,10 @@ bar {
   display: flex;
   align-items: center;
   backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   transition: backdrop-filter 0.5s ease-in-out,
     background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  user-select: none;
 }
 nav {
   position: absolute;
@@ -84,10 +97,30 @@ nav a {
   justify-content: space-evenly !important;
   align-items: stretch !important;
 }
+.movingBG {
+  position: absolute;
+  width: 20vw;
+  aspect-ratio: 0.749;
+  left: -10%;
+  transform: scale(1.2);
+}
+.bgHolder {
+  position: absolute;
+  display: block;
+  width: 20vw;
+  aspect-ratio: 0.749;
+  overflow: hidden;
+  border-radius: 1rem;
+}
 .pfp {
   position: relative;
   width: 20vw;
-  aspect-ratio: 0.79;
+  aspect-ratio: 0.749;
+  border-radius: 1rem;
+  transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 250ms;
+}
+.pfpContainer:hover .pfp {
+  background-color: #0000004f;
 }
 .pfptxt {
   height: max-content;
@@ -103,8 +136,11 @@ nav a {
   font-family: "Lato", sans-serif !important;
 }
 .pfpContainer {
-  width: max-content;
-  background-color: #c2ded1;
+  width: min-content;
+  background-color: #0000003b;
+  border-radius: 1rem;
+  aspect-ratio: 0.749;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(51, 51, 51) 0px 0px 0px 1px;
 }
 .title {
   position: absolute;
@@ -217,10 +253,10 @@ h1.name {
 .button {
   text-align: center;
   margin-top: 2vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative;
   background-color: #ece5c7;
   color: black;
@@ -230,6 +266,7 @@ h1.name {
   border-radius: 2vh;
   transition: letter-spacing 0.35s ease-in-out, border-radius 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
+  user-select: none;
 }
 .button:hover {
   letter-spacing: 8px;
@@ -297,16 +334,10 @@ h1.name {
     flex-direction: column !important;
     align-items: center !important;
   }
-  .pfp {
-    position: relative;
-    background-color: #2f8f9d;
-    height: min-content;
-    width: 80vw;
-    aspect-ratio: 0.79;
-  }
+  .bgHolder,
+  .movingBG,
+  .pfp,
   .pfptxt {
-    position: relative;
     width: 80vw;
-    height: 100%;
   }
 }
