@@ -676,12 +676,7 @@ inproject {
     width: 7.5vw;
   }
 }
-@media only screen and (max-aspect-ratio: 920) {
-  rotate {
-    display: flex;
-  }
-}
-@media only screen and (max-aspect-ratio: 43) {
+@media only screen and (max-aspect-ratio: 4/3) {
   #svg1holder {
     margin-left: calc(30vw - 50px);
     width: 70vw;
@@ -701,7 +696,7 @@ inproject {
     top: calc(11vh + 5.6vw);
   }
 }
-@media only screen and (max-aspect-ratio: 910) {
+@media only screen and (max-aspect-ratio: 9/10) {
   #svg1holder {
     margin-left: calc(30vw - 50px);
     width: 70vw;
