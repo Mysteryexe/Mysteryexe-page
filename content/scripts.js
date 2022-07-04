@@ -1,5 +1,4 @@
 //! by Mystery.exe#5099
-
 num = 0;
 var i = 1;
 var lastPrj;
@@ -12,7 +11,7 @@ var bgTexture = document.getElementsByClassName("bgTexture");
 var bgcontainer = document.getElementsByClassName("bgcontainer");
 
 //! project images id(s)
-const images = ["render", "gingernium", "soon1", "soon2"];
+const images = ["render", "gingernium", "colorgen", "soon2"];
 const render = [
   "content/images/RenderFinalWithMarker.webp",
   "content/images/RenderNo2.webp",
@@ -28,9 +27,13 @@ const gingernium = [
   "content/images/Gingernium06.webp",
   "content/svg/endmsg.svg",
 ];
-const soon1 = ["content/svg/soon.svg"];
+const colorgen = [
+  "content/svg/titleColorGen.svg",
+  "content/gif/ColorGen.gif",
+  "content/svg/endmsg.svg",
+];
 const soon2 = ["content/svg/soon.svg"];
-const links = [render, gingernium, soon1, soon2];
+const links = [render, gingernium, colorgen, soon2];
 
 //! functions
 function getRandomInt(max) {
@@ -116,12 +119,20 @@ function ChangeImage(image, status) {
       projectImg[index].src = String(links[index][curImage]);
     }, 150);
   }
+  //change text
   if (index == 0 && curImage >= 1) {
     text.innerHTML =
       "Renders for 'Sarvgard' with V-Ray<br><a target='_blank' href=https://www.instagram.com/sanaat_e_sakhtan.office>Click here for more info!</a>";
   } else if (index == 0) {
     text.innerHTML = "Vintage Room rendered with V-Ray";
   }
+  if (index == 2 && curImage >= 1) {
+    text.innerHTML = "";
+  } else if (index == 2) {
+    text.innerHTML =
+      'A free Firefox extension which generates colors with a click! (copies on clipboard too)<br><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/color-generator">click to checkout on firefox store</a>';
+  }
+  //hide text on the last img
   if (links[index][curImage] == "content/svg/endmsg.svg") {
     text.style.opacity = 0;
   } else {
